@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4E788EF8-A5AE-4B71-B75D-733C0C7A0352"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CED7224C-5A36-4798-A9CE-7D737F1F7142"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FireStyleFireBaseJutsu/On Fire/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CED7224C-5A36-4798-A9CE-7D737F1F7142 - dd0313d897e89260"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FireStyleFireBaseJutsu.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "FireStyleFireBaseJutsu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jerryren/Desktop/FireStyleFireBaseJutsu.tmp/FireStyleFireBaseJutsu/On%20Fire/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "2578">
+               </Location>
+               <Location
+                  uuid = "CED7224C-5A36-4798-A9CE-7D737F1F7142 - f8803452c87bcf4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in FireStyleFireBaseJutsu.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "FireStyleFireBaseJutsu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jerryren/Desktop/FireStyleFireBaseJutsu.tmp/FireStyleFireBaseJutsu/On%20Fire/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "1972">
+               </Location>
+               <Location
+                  uuid = "CED7224C-5A36-4798-A9CE-7D737F1F7142 - 47c6947f7893113d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Error) -&gt; () in FireStyleFireBaseJutsu.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "FireStyleFireBaseJutsu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jerryren/Desktop/FireStyleFireBaseJutsu.tmp/FireStyleFireBaseJutsu/On%20Fire/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "25">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1533215A-A5D8-498A-A6E0-9B006A20AD9D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FireStyleFireBaseJutsu/On Fire/SignaUppViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
