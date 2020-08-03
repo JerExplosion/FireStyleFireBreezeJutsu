@@ -68,7 +68,6 @@ class ViewController: UIViewController {
 //            }
     
     }
-    
 }
 
 // MARS: - StackOverFlow way
@@ -81,7 +80,6 @@ class ViewController: UIViewController {
 //
 //            print(postDictionary)
 //        })
-
 
 
 

@@ -11,9 +11,7 @@ import UIKit
 class InFoCello: UITableViewCell {
 
     @IBOutlet weak var snapShotImageView: RImageView!
-    
     @IBOutlet weak var digitsLabel: UILabel!
-    
     @IBOutlet weak var cognomenLabel: UILabel!
     
 }

@@ -9,14 +9,10 @@
 // xj = 细节
 import UIKit
 
-protocol NotificPacific {
-    
-                        }
+protocol NotificPacific { }
 class XJViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
 }

@@ -8,8 +8,8 @@
 
 import FirebaseAuth
 import Firebase
-import UIKit
 import GoogleSignIn
+import UIKit
 
 class SigmaInnViewController: UIViewController {
     

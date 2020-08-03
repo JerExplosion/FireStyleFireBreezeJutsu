@@ -13,9 +13,7 @@ import FirebaseAuth
 class TomodaNakaViewController: UIViewController {
     
     var ref: DatabaseReference? // ?+guard later
-    
-    let cUser = Auth.auth().currentUser
-    
+    let pUser = Auth.auth().currentUser
     
     @IBOutlet weak var targetUsernameTextfield: UITextField!
     
@@ -31,7 +29,7 @@ class TomodaNakaViewController: UIViewController {
         
         ref = Database.database().reference()
         
-        guard let presentUserUID = cUser?.uid else { return }
+        guard let presentUserUID = pUser?.uid else { return }
         
         let friendzList = ref?.observe(.value) { (dataSnap) in
             print(dataSnap.childSnapshot(forPath: presentUserUID).childSnapshot(forPath: "Friendz").children.allObjects[0])
@@ -41,32 +39,30 @@ class TomodaNakaViewController: UIViewController {
         
         // childByAutoID - 利器
         
-        ref?.child(presentUserUID).setValue(["Friendz": friendzList.append blablabla], withCompletionBlock: { (erro, databaseReference) in
-            print("erro is:", erro?.localizedDescription)
-            print(presentUserUID)
-            print(self.ref?.childByAutoId())
-            print("end of block")
-        })
+//        ref?.child(presentUserUID).setValue(["Friendz": friendzList.append blablabla], withCompletionBlock: { (erro, databaseReference) in
+//            print("erro is:", erro?.localizedDescription)
+//            print(presentUserUID)
+//            print(self.ref?.childByAutoId())
+//            print("end of block")
+//        })
     }
-    
     
     func setUpFriendboat() {
         
         ref = Database.database().reference()
         
-        guard let cUserUID = cUser?.uid else { return }
+        guard let cUserUID = pUser?.uid else { return }
 
         ref?.child(cUserUID).setValue(["Followers": ["Frank", "Keith"]], withCompletionBlock: { (erro, databaseReference) in
             print("erro is:", erro?.localizedDescription)
             print(cUserUID)
         })
         
-
         ref?.observe(.value) { (dataSnap) in
             print(dataSnap.childSnapshot(forPath: cUserUID).childSnapshot(forPath: "Followers").children.allObjects[1])
         }
-        // ref.updateChildValue
         
+        // ref.updateChildValue
     }
 }
 
