@@ -12,15 +12,44 @@ import FirebaseAuth
 
 class TomodaNakaViewController: UIViewController {
     
+    var usersCollection = TargetedFriend() // one layer for simplicity
+    // switch to NSUser later
+    
+
     var ref: DatabaseReference? // ?+guard later
     let pUser = Auth.auth().currentUser
     
+    var tempStringFriendzList: [String] = []
+    
     @IBOutlet weak var targetUsernameTextfield: UITextField!
+    @IBOutlet weak var presentFriendzTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //
+        presentFriendzTable.dataSource = self
+        
+        setUpFriendboat()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        snatchUsers()
+    }
+    
+    
+    func setUpFriendboat() {
+        
+        ref = Database.database().reference()
+        guard let pUserUID = pUser?.uid else { return }
+        
+        let userInfoDict = ["UID": pUserUID, "User Name": "MilkyWay", "Friendz": ["Mercury", "Venus", "Mars"], "Friendz Count": 3] as [String : Any]
+        
+        ref?.child("Users").child(pUserUID).setValue(userInfoDict)
+        // updateChildValues(userInfoDict)
+
+        print("set up friend boat called")
+    }
+    
     
     @IBAction func friendshipInitiation(_ sender: UIButton) {
         
@@ -32,10 +61,21 @@ class TomodaNakaViewController: UIViewController {
         guard let presentUserUID = pUser?.uid else { return }
         
         let friendzList = ref?.observe(.value) { (dataSnap) in
+            
             print(dataSnap.childSnapshot(forPath: presentUserUID).childSnapshot(forPath: "Friendz").children.allObjects[0])
             print(dataSnap)
+            print("end of dataSnap")
         }
         print("friendzList is: ", friendzList)
+        
+        ref?.child(presentUserUID).child("Friendz").observeSingleEvent(of: .value, with: { (dataSnap) in
+            if let individualFriend = dataSnap.value as? String {
+                print("individual friend's value is \(individualFriend)")
+            }
+        })
+                    
+        
+//        self.tempStringFriendzList = (dataSnap.childSnapshot(forPath: presentUserUID).childSnapshot(forPath: "Friendz").children.allObjects.first
         
         // childByAutoID - 利器
         
@@ -45,25 +85,18 @@ class TomodaNakaViewController: UIViewController {
 //            print(self.ref?.childByAutoId())
 //            print("end of block")
 //        })
-    }
-    
-    func setUpFriendboat() {
         
-        ref = Database.database().reference()
         
-        guard let cUserUID = pUser?.uid else { return }
-
-        ref?.child(cUserUID).setValue(["Followers": ["Frank", "Keith"]], withCompletionBlock: { (erro, databaseReference) in
+        tempStringFriendzList.append(targetUserName ?? "Imaginary friend")
+        ref?.child(presentUserUID).setValue(["Friendz": tempStringFriendzList], withCompletionBlock: { (erro, datanaseReference) in
             print("erro is:", erro?.localizedDescription)
-            print(cUserUID)
+            print(presentUserUID)
+            print(self.ref?.childByAutoId())
+            print("end of block")
+            
         })
-        
-        ref?.observe(.value) { (dataSnap) in
-            print(dataSnap.childSnapshot(forPath: cUserUID).childSnapshot(forPath: "Followers").children.allObjects[1])
-        }
-        
-        // ref.updateChildValue
     }
+
 }
 
 //        print(cUser?.email)
@@ -73,6 +106,20 @@ class TomodaNakaViewController: UIViewController {
 //            print("email verfi error", erro?.localizedDescription)
 //        })
 
+//        ref = Database.database().reference()
+//
+//        guard let cUserUID = pUser?.uid else { return }
+//
+//        ref?.child(cUserUID).setValue(["Followers": ["Frank", "Keith"]], withCompletionBlock: { (erro, databaseReference) in
+//            print("erro is:", erro?.localizedDescription)
+//            print(cUserUID)
+//        })
+//
+//        ref?.observe(.value) { (dataSnap) in
+//            print(dataSnap.childSnapshot(forPath: cUserUID).childSnapshot(forPath: "Followers").children.allObjects[1])
+//        }
+        
+        // ref.updateChildValue
 
 //let followersArryRef = ref?.child(cUserUID).child("Followers")
 //print("followers are", followersArryRef)

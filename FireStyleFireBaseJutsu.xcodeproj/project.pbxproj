@@ -24,6 +24,8 @@
 		8FD47FC024D0B57300235FFE /* InFoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD47FBF24D0B57300235FFE /* InFoViewController.swift */; };
 		8FD47FC224D0B7DD00235FFE /* PersistenceRelevant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD47FC124D0B7DD00235FFE /* PersistenceRelevant.swift */; };
 		8FD47FC524D0BEB100235FFE /* VirtualContacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8FD47FC324D0BEB100235FFE /* VirtualContacts.xcdatamodeld */; };
+		8FD5CA7D24D7CB39002E8176 /* NSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD5CA7C24D7CB39002E8176 /* NSUser.swift */; };
+		8FD5CA8024D7CF61002E8176 /* CurrentFriendzTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD5CA7F24D7CF61002E8176 /* CurrentFriendzTable.swift */; };
 		A6AA9E5D5CEEE7D3BC5C1AD0 /* Pods_FireStyleFireBaseJutsu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971B37DD6576146E18A8DC09 /* Pods_FireStyleFireBaseJutsu.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		8FD47FBF24D0B57300235FFE /* InFoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InFoViewController.swift; sourceTree = "<group>"; };
 		8FD47FC124D0B7DD00235FFE /* PersistenceRelevant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceRelevant.swift; sourceTree = "<group>"; };
 		8FD47FC424D0BEB100235FFE /* VirtualContacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VirtualContacts.xcdatamodel; sourceTree = "<group>"; };
+		8FD5CA7C24D7CB39002E8176 /* NSUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUser.swift; sourceTree = "<group>"; };
+		8FD5CA7F24D7CF61002E8176 /* CurrentFriendzTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentFriendzTable.swift; sourceTree = "<group>"; };
 		971B37DD6576146E18A8DC09 /* Pods_FireStyleFireBaseJutsu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireStyleFireBaseJutsu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF1735016E541580C50A3EA6 /* Pods-FireStyleFireBaseJutsu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireStyleFireBaseJutsu.release.xcconfig"; path = "Target Support Files/Pods-FireStyleFireBaseJutsu/Pods-FireStyleFireBaseJutsu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,13 +126,23 @@
 		8FD47FBE24D0B51800235FFE /* On Fire */ = {
 			isa = PBXGroup;
 			children = (
+				8FD5CA7E24D7CCFC002E8176 /* Model */,
 				8FD47FBA24D0796200235FFE /* SignaUppViewController.swift */,
 				8FC0C08F24D63D510039F5A6 /* TomodaNakaViewController.swift */,
+				8FD5CA7F24D7CF61002E8176 /* CurrentFriendzTable.swift */,
 				8FBD64EF24CF661600075A4F /* ViewController.swift */,
 				8F7F21F824D21567003113CF /* XJViewController.swift */,
 				8FD47FBC24D095AA00235FFE /* SigmaInnViewController.swift */,
 			);
 			path = "On Fire";
+			sourceTree = "<group>";
+		};
+		8FD5CA7E24D7CCFC002E8176 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8FD5CA7C24D7CB39002E8176 /* NSUser.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		ACD0239B9490BA49FAC214D1 /* Pods */ = {
@@ -304,6 +318,7 @@
 				8FBD650624CF75FF00075A4F /* AppearanceDependencies.swift    .swift in Sources */,
 				8FD47FC524D0BEB100235FFE /* VirtualContacts.xcdatamodeld in Sources */,
 				8FD47FC224D0B7DD00235FFE /* PersistenceRelevant.swift in Sources */,
+				8FD5CA8024D7CF61002E8176 /* CurrentFriendzTable.swift in Sources */,
 				8FD47FBB24D0796200235FFE /* SignaUppViewController.swift in Sources */,
 				8FC0C09024D63D510039F5A6 /* TomodaNakaViewController.swift in Sources */,
 				8FAD650E24D28B94008A4A28 /* InFoCello.swift in Sources */,
@@ -311,6 +326,7 @@
 				8F42E65E24D0D37D0078F26A /* DataCoreViewModel.swift in Sources */,
 				8FD47FBD24D095AA00235FFE /* SigmaInnViewController.swift in Sources */,
 				8FBD64F024CF661600075A4F /* ViewController.swift in Sources */,
+				8FD5CA7D24D7CB39002E8176 /* NSUser.swift in Sources */,
 				8FBD64EC24CF661500075A4F /* AppDelegate.swift in Sources */,
 				8FBD64EE24CF661600075A4F /* SceneDelegate.swift in Sources */,
 			);

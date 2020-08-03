@@ -88,7 +88,6 @@ class SignaUppViewController: UIViewController {
         let anotherRef = citiesRef.observe(DataEventType.value, with: { (snapshot) in
             let postDictionary = snapshot.value as? [String : AnyObject] ?? [:]
             
-            
             print(postDictionary)
         })
         
