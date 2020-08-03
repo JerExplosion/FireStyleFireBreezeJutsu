@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         
         self.ref.child("cities").child("7").setValue(["namae": "santo domingo"])
         self.ref.child("cities").child("11").setValue(["namae": "san diego"])
-        self.ref.child("cities").child("22").setValue(["namae": "LA"])
+        self.ref.child("cities").child("22").setValue(["namae": "hawaii"])
         
         
         ref.child("cities").child("7").observeSingleEvent(of: .value, with: { (snapshot) in
