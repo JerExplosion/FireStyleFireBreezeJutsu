@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8F42E65E24D0D37D0078F26A /* DataCoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F42E65D24D0D37D0078F26A /* DataCoreViewModel.swift */; };
+		8F57B1B824D9ADBB0093BAA6 /* KiKaMoEdeNoo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57B1B724D9ADBA0093BAA6 /* KiKaMoEdeNoo.swift */; };
 		8F7F21F924D21567003113CF /* XJViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7F21F824D21567003113CF /* XJViewController.swift */; };
 		8FAD650E24D28B94008A4A28 /* InFoCello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD650D24D28B94008A4A28 /* InFoCello.swift */; };
 		8FBD64EC24CF661500075A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD64EB24CF661500075A4F /* AppDelegate.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		08CEB9B26963B7F822FA6FC9 /* Pods-FireStyleFireBaseJutsu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireStyleFireBaseJutsu.debug.xcconfig"; path = "Target Support Files/Pods-FireStyleFireBaseJutsu/Pods-FireStyleFireBaseJutsu.debug.xcconfig"; sourceTree = "<group>"; };
 		8F42E65D24D0D37D0078F26A /* DataCoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoreViewModel.swift; sourceTree = "<group>"; };
+		8F57B1B724D9ADBA0093BAA6 /* KiKaMoEdeNoo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiKaMoEdeNoo.swift; sourceTree = "<group>"; };
 		8F7F21F824D21567003113CF /* XJViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XJViewController.swift; sourceTree = "<group>"; };
 		8FAD650D24D28B94008A4A28 /* InFoCello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InFoCello.swift; sourceTree = "<group>"; };
 		8FBD64E824CF661500075A4F /* FireStyleFireBaseJutsu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireStyleFireBaseJutsu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 			children = (
 				8FBD650524CF75FE00075A4F /* AppearanceDependencies.swift    .swift */,
 				8FAD650D24D28B94008A4A28 /* InFoCello.swift */,
+				8F57B1B724D9ADBA0093BAA6 /* KiKaMoEdeNoo.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				8FBD64F024CF661600075A4F /* ViewController.swift in Sources */,
 				8FD5CA7D24D7CB39002E8176 /* NSUser.swift in Sources */,
 				8FBD64EC24CF661500075A4F /* AppDelegate.swift in Sources */,
+				8F57B1B824D9ADBB0093BAA6 /* KiKaMoEdeNoo.swift in Sources */,
 				8FBD64EE24CF661600075A4F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
