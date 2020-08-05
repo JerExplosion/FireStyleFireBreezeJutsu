@@ -24,9 +24,7 @@ extension TomodaNakaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 7
     }
-
 }
-
 
 extension TomodaNakaViewController {
     
@@ -52,11 +50,8 @@ extension TomodaNakaViewController {
                     // blabla
                 }
             }
-            
         })
-        
         self.presentFriendzTable.reloadData()
-        
     }
     
 }

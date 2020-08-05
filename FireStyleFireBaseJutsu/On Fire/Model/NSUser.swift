@@ -21,3 +21,8 @@ class TargetedFriend: NSObject { // is NSObject necessary here though
     var fuame: String!
 }
      
+extension String {
+    var aintEmpty: Bool {
+        return !isEmpty
+    }
+}
