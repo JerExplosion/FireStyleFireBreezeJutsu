@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="drc-id-BTP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sDI-Db-ZBb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -239,6 +239,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signaUpAction:" destination="sDI-Db-ZBb" eventType="touchUpInside" id="Mu4-in-e8N"/>
+                                    <segue destination="drc-id-BTP" kind="show" id="3yH-VO-VLG"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3kd-hY-xqW" userLabel="Sign in instead Stack">
@@ -342,6 +343,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aEc-RG-fjL"/>
                     </view>
+                    <navigationItem key="navigationItem" id="yTZ-dy-1oW"/>
                     <connections>
                         <outlet property="imgView" destination="QUp-Dm-eKK" id="2oV-sZ-yeR"/>
                         <outlet property="pCodeTextField" destination="YuI-oP-jW8" id="hkm-SW-496"/>
@@ -350,7 +352,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BJw-k6-ANI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1536.2318840579712" y="-394.41964285714283"/>
+            <point key="canvasLocation" x="-626.08695652173913" y="-394.41964285714283"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="et7-Pm-dVU">
@@ -416,7 +418,7 @@
             <objects>
                 <viewController id="drc-id-BTP" customClass="TomodaNakaViewController" customModule="FireStyleFireBaseJutsu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gjv-FJ-3b5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who would you like to befriend?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmn-SP-a7J">
@@ -487,6 +489,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="3vn-lF-XBK"/>
                     </view>
+                    <navigationItem key="navigationItem" id="E8j-ad-hLf"/>
                     <connections>
                         <outlet property="presentFriendzTable" destination="Xsk-Th-7GW" id="5jc-Xz-Agb"/>
                         <outlet property="targetUsernameTextfield" destination="MMF-3o-AXB" id="aCX-tz-3EF"/>
@@ -685,7 +688,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvg-jU-g27" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-411" y="213"/>
+            <point key="canvasLocation" x="498.55072463768118" y="212.94642857142856"/>
         </scene>
     </scenes>
     <resources>

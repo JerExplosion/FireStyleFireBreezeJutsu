@@ -28,27 +28,47 @@ class TomodaNakaViewController: UIViewController {
         super.viewDidLoad()
         presentFriendzTable.dataSource = self
         
-        setUpFriendboat()
+        newSetUpFriendBoat(targetEmail: "whattheheck@whattheheck.com")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        snatchUsers()
+    //    snatchUsers()
     }
     
     
-    func setUpFriendboat() {
+    func newSetUpFriendBoat(targetEmail: String) {
         
         ref = Database.database().reference()
-        guard let pUserUID = pUser?.uid else { return }
         
-        let userInfoDict = ["UID": pUserUID, "User Name": "MilkyWay", "Friendz": ["Mercury", "Venus", "Mars"], "Friendz Count": 3] as [String : Any]
-        
-        ref?.child("Users").child(pUserUID).setValue(userInfoDict)
-        // updateChildValues(userInfoDict)
+        ref?.child("Users").queryOrderedByKey().observeSingleEvent(of: .value, with: { (dSnapshot) in
+            let userIDs = dSnapshot.value as! [String:AnyObject]
+            
 
-        print("set up friend boat called")
+            print("Separator -----------------------")
+            for userID in userIDs {
+                print("user email is ", userID.value["Email"])
+                if targetEmail == userID.value["Email"] as? String {
+                    
+                    print("user ID . key is" ,userID.key)
+                    
+                    self.ref?.child("Users").child(userID.key).updateChildValues([ "Friendz": [targetEmail] ])
+     
+                    
+                } else {
+                    print("TargetEmail not found")
+                }
+                
+                
+            }
+            
+            print("Separator -----------------------")
+        })
+        
+        
+        
     }
+
     
     
     @IBAction func friendshipInitiation(_ sender: UIButton) {
@@ -157,3 +177,15 @@ class TomodaNakaViewController: UIViewController {
 //        }
 
 
+//    func oldSetUpFriendboat() {
+//
+//        ref = Database.database().reference()
+//        guard let pUserUID = pUser?.uid else { return }
+//
+//        let userInfoDict = ["UID": pUserUID, "User Name": "MilkyWay", "Friendz": ["Mercury", "Venus", "Mars"], "Friendz Count": 3] as [String : Any]
+//
+//        ref?.child("Users").child(pUserUID).setValue(userInfoDict)
+//        // updateChildValues(userInfoDict)
+//
+//        print("set up friend boat called")
+//    }

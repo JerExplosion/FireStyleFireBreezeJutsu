@@ -49,54 +49,10 @@ class SignaUppViewController: UIViewController {
                 }
             }
         }
+    }
         
         // MARS: - 
         
-        // MARK: - seting key value pairs for database
-        
-        self.ref.child("cities").child("7").setValue(["namae": "santo domingo"])
-        self.ref.child("cities").child("11").setValue(["namae": "san diego"])
-        self.ref.child("cities").child("22").setValue(["namae": "LA"])
-        
-        
-        ref.child("cities").child("7").observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            let value = snapshot.value as? NSDictionary
-            let namae = value?["namae"] as? String ?? ""
-            
-            print("Namaeeee = \(namae)") // breakpoint + 'po namae' here
-            
-            // ...
-        }) { (error) in
-            print(error.localizedDescription)
-        }
-        
-        // MARS: - A comletion-block way of setting key value pairs
-        ref.child("cities").child("22").setValue(["namae": "NYC"]) {
-            (error:Error?, ref:DatabaseReference) in
-            
-            if let error = error {
-                print("Data could not be saved: \(error).")
-            } else {
-                print("Data saved successfully!")
-            }
-        }
-        
-        var citiesRef: DatabaseReference!
-        citiesRef = Database.database().reference().child("cities")
-        
-        let anotherRef = citiesRef.observe(DataEventType.value, with: { (snapshot) in
-            let postDictionary = snapshot.value as? [String : AnyObject] ?? [:]
-            
-            print(postDictionary)
-        })
-        
-        
-//
-    }
-    
-            // MARS: - Ordering data sample code
-    //        let postsByMostPopular = ref.child("posts").queryOrdered(byChild: "metrics/views")
     
 // MARK: - <#Section Heading#>
     
@@ -108,9 +64,26 @@ class SignaUppViewController: UIViewController {
         guard let uEm = uEmTextField.text else { return }
         guard let pCode = pCodeTextField.text else { return }
         
+
         Auth.auth().createUser(withEmail: uEm, password: pCode) { (authRes, error) in
-            print("Auth result is: ", authRes)
+//            print("Auth result is: ", authRes)
             print("My error is \(error.debugDescription)")
+
+            guard let authedUser = Auth.auth().currentUser else { return }
+            
+            print(authedUser.email)
+            print(authedUser.uid)
+            
+            let pUserUID = authedUser.uid
+
+            let userInfoDict = ["UID": pUserUID, "Email":  uEm, " User Name": "Myth", "Friendz": ["So lonely in here"], "Friendz Count": 0] as [String : Any]
+            
+            self.ref.child("Users").child(pUserUID).setValue(userInfoDict)
+            
+            print("separator ------------------")
+            print(authedUser.uid)
+            print("successfully sending user  \(authedUser.email)  to the cloud")
+            print("separator ------------------")
         }
     }
     
@@ -135,3 +108,50 @@ class SignaUppViewController: UIViewController {
 // 943009449310-59gnroclfji4fuukkrha5t34pjnpqcj7.apps.googleusercontent.com
 
 // copy ios url ID from 
+
+
+        // MARK: - seting key value pairs for database
+//
+//        self.ref.child("cities").child("7").setValue(["namae": "santo domingo"])
+//        self.ref.child("cities").child("11").setValue(["namae": "san diego"])
+//        self.ref.child("cities").child("22").setValue(["namae": "LA"])
+//
+//
+//        ref.child("cities").child("7").observeSingleEvent(of: .value, with: { (snapshot) in
+//            // Get user value
+//            let value = snapshot.value as? NSDictionary
+//            let namae = value?["namae"] as? String ?? ""
+//
+//            print("Namaeeee = \(namae)") // breakpoint + 'po namae' here
+//
+//            // ...
+//        }) { (error) in
+//            print(error.localizedDescription)
+//        }
+//
+//        // MARS: - A comletion-block way of setting key value pairs
+//        ref.child("cities").child("22").setValue(["namae": "NYC"]) {
+//            (error:Error?, ref:DatabaseReference) in
+//
+//            if let error = error {
+//                print("Data could not be saved: \(error).")
+//            } else {
+//                print("Data saved successfully!")
+//            }
+//        }
+//
+//        var citiesRef: DatabaseReference!
+//        citiesRef = Database.database().reference().child("cities")
+//
+//        let anotherRef = citiesRef.observe(DataEventType.value, with: { (snapshot) in
+//            let postDictionary = snapshot.value as? [String : AnyObject] ?? [:]
+//
+//            print(postDictionary)
+//        })
+//
+//
+////
+//    }
+//
+//            // MARS: - Ordering data sample code
+//    //        let postsByMostPopular = ref.child("posts").queryOrdered(byChild: "metrics/views")

@@ -31,13 +31,6 @@ class SigmaInnViewController: UIViewController {
         guard let uEm = uEmTextField.text else { return }
         guard let pCode = pCodeTextField.text else { return }
         
-//        Auth.auth().signIn(withEmail: uEm, password: pCode) { [weak self] (authRes, error) in
-//            guard let selfStrong = self else { return }
-//
-//            print("Auth result is: ", authRes)
-//            print("My error is \(error.debugDescription)")
-//            print(selfStrong)
-//        }
         
         Auth.auth().signIn(withEmail: uEm, password: pCode) { [weak self] (authRes, error) in
             guard let strongerSelf = self else { return }
@@ -54,4 +47,13 @@ class SigmaInnViewController: UIViewController {
         }
     }
     
-}       
+}
+
+
+//        Auth.auth().signIn(withEmail: uEm, password: pCode) { [weak self] (authRes, error) in
+//            guard let selfStrong = self else { return }
+//
+//            print("Auth result is: ", authRes)
+//            print("My error is \(error.debugDescription)")
+//            print(selfStrong)
+//        }

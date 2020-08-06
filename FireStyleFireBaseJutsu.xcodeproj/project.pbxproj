@@ -116,9 +116,9 @@
 			children = (
 				8FBD64ED24CF661600075A4F /* SceneDelegate.swift */,
 				8FBD64EB24CF661500075A4F /* AppDelegate.swift */,
+				8FD47FBE24D0B51800235FFE /* On Fire */,
 				8F42E65F24D1247F0078F26A /* DataCoreViewModel */,
 				8FD47FC324D0BEB100235FFE /* VirtualContacts.xcdatamodeld */,
-				8FD47FBE24D0B51800235FFE /* On Fire */,
 				8F42E66024D124AC0078F26A /* View */,
 				8FBD64F124CF661600075A4F /* Main.storyboard */,
 				8FBD64F424CF661900075A4F /* Assets.xcassets */,
