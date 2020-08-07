@@ -7,6 +7,7 @@
 //
 
 // xj = 细节
+
 import UIKit
 
 protocol NotificPacific { }
@@ -16,3 +17,7 @@ class XJViewController: UIViewController {
         super.viewDidLoad()
     }
 }
+
+// fill out xj of profile
+// img-picker-uploader -> StorageFire
+        

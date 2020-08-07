@@ -76,7 +76,7 @@ class SignaUppViewController: UIViewController {
             
             let pUserUID = authedUser.uid
 
-            let userInfoDict = ["UID": pUserUID, "Email":  uEm, " User Name": "Myth", "Friendz": ["So lonely in here"], "Friendz Count": 0] as [String : Any]
+            let userInfoDict = ["UID": pUserUID, "Email":  uEm, " User Name": "Myth", "Friendz": ["So lonely in here"], "Friendz Count": 1] as [String : Any]
             
             self.ref.child("Users").child(pUserUID).setValue(userInfoDict)
             
@@ -86,6 +86,12 @@ class SignaUppViewController: UIViewController {
             print("separator ------------------")
         }
     }
+    
+    // MARS: -
+    @IBAction func shiftToSignIn(_ sender: UIButton) {
+        
+    }
+    // MARS: -
     
     @IBAction func tempLogInAction(_ sender: UIButton) {
         

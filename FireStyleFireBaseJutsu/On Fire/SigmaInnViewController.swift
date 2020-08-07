@@ -47,6 +47,10 @@ class SigmaInnViewController: UIViewController {
         }
     }
     
+    @IBAction func shiftToSignUp(_ sender: UIButton) {
+        
+    }
+    
 }
 
 

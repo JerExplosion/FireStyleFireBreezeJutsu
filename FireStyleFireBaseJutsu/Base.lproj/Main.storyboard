@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sDI-Db-ZBb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="78G-oq-Oe6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -111,7 +111,7 @@
             <objects>
                 <viewController storyboardIdentifier="XJViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rPV-lM-Kim" customClass="XJViewController" customModule="FireStyleFireBaseJutsu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q92-kp-NXb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.crop.circle.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NzC-j8-lS8">
@@ -159,10 +159,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="MEH-UL-mFM"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9Q2-Uv-60N"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8uT-UX-hTI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1709" y="834"/>
+            <point key="canvasLocation" x="-4457" y="680"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZFI-nI-IhJ">
@@ -239,7 +240,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signaUpAction:" destination="sDI-Db-ZBb" eventType="touchUpInside" id="Mu4-in-e8N"/>
-                                    <segue destination="drc-id-BTP" kind="show" id="3yH-VO-VLG"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3kd-hY-xqW" userLabel="Sign in instead Stack">
@@ -255,6 +255,9 @@
                                         <rect key="frame" x="174" y="0.0" width="47" height="30"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
                                         <state key="normal" title="Sign in"/>
+                                        <connections>
+                                            <action selector="shiftToSignIn:" destination="sDI-Db-ZBb" eventType="touchUpInside" id="ADL-uL-hJi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -444,6 +447,7 @@
                                 <connections>
                                     <action selector="friendshipInitiation:" destination="drc-id-BTP" eventType="touchUpInside" id="hpL-3R-SuS"/>
                                     <action selector="signaUpAction:" destination="sDI-Db-ZBb" eventType="touchUpInside" id="IS3-D5-bnh"/>
+                                    <segue destination="rPV-lM-Kim" kind="show" id="AAy-Mz-1uA"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="target username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MMF-3o-AXB" customClass="KaedeTextField" customModule="FireStyleFireBaseJutsu" customModuleProvider="target">
@@ -451,7 +455,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.96078431372549022" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -556,6 +560,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sigmaInnAction:" destination="78G-oq-Oe6" eventType="touchUpInside" id="CNW-Nr-Dwu"/>
+                                    <segue destination="drc-id-BTP" kind="show" id="al5-b0-n14"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EM1-E9-8gh" userLabel="Sign in instead Stack">
@@ -571,6 +576,9 @@
                                         <rect key="frame" x="174" y="0.0" width="51" height="30"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
                                         <state key="normal" title="Sign up"/>
+                                        <connections>
+                                            <action selector="shiftToSignUp:" destination="78G-oq-Oe6" eventType="touchUpInside" id="o33-pC-gnN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

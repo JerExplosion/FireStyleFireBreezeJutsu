@@ -58,8 +58,6 @@ class TomodaNakaViewController: UIViewController {
                 } else {
                     print("TargetEmail not found")
                 }
-                
-                
             }
             
             print("Separator -----------------------")
@@ -83,7 +81,7 @@ class TomodaNakaViewController: UIViewController {
         let friendzList = ref?.observe(.value) { (dataSnap) in
             
             print(dataSnap.childSnapshot(forPath: presentUserUID).childSnapshot(forPath: "Friendz").children.allObjects[0])
-            print(dataSnap)
+            // print(dataSnap)
             print("end of dataSnap")
         }
         print("friendzList is: ", friendzList)
@@ -93,28 +91,16 @@ class TomodaNakaViewController: UIViewController {
                 print("individual friend's value is \(individualFriend)")
             }
         })
-                    
-        
-//        self.tempStringFriendzList = (dataSnap.childSnapshot(forPath: presentUserUID).childSnapshot(forPath: "Friendz").children.allObjects.first
-        
-        // childByAutoID - 利器
-        
-//        ref?.child(presentUserUID).setValue(["Friendz": friendzList.append blablabla], withCompletionBlock: { (erro, databaseReference) in
-//            print("erro is:", erro?.localizedDescription)
-//            print(presentUserUID)
-//            print(self.ref?.childByAutoId())
-//            print("end of block")
-//        })
-        
-        
+                           
         tempStringFriendzList.append(targetUserName ?? "Imaginary friend")
-        ref?.child(presentUserUID).setValue(["Friendz": tempStringFriendzList], withCompletionBlock: { (erro, datanaseReference) in
+        
+        ref?.child("Users").child(presentUserUID).updateChildValues(["Friendz": tempStringFriendzList], withCompletionBlock: { (erro, databaseReference) in
             print("erro is:", erro?.localizedDescription)
             print(presentUserUID)
             print(self.ref?.childByAutoId())
             print("end of block")
-            
         })
+
     }
 
 }
@@ -176,6 +162,27 @@ class TomodaNakaViewController: UIViewController {
 //            print("element is", element)
 //        }
 
+
+//        self.tempStringFriendzList = (dataSnap.childSnapshot(forPath: presentUserUID).childSnapshot(forPath: "Friendz").children.allObjects.first
+        
+        // childByAutoID - 利器
+        
+//        ref?.child(presentUserUID).setValue(["Friendz": friendzList.append blablabla], withCompletionBlock: { (erro, databaseReference) in
+//            print("erro is:", erro?.localizedDescription)
+//            print(presentUserUID)
+//            print(self.ref?.childByAutoId())
+//            print("end of block")
+//        })
+
+
+//tempStringFriendzList.append(targetUserName ?? "Imaginary friend")
+//ref?.child(presentUserUID).setValue(["Friendz": tempStringFriendzList], withCompletionBlock: { (erro, datanaseReference) in
+//    print("erro is:", erro?.localizedDescription)
+//    print(presentUserUID)
+//    print(self.ref?.childByAutoId())
+//    print("end of block")
+//
+//})
 
 //    func oldSetUpFriendboat() {
 //
