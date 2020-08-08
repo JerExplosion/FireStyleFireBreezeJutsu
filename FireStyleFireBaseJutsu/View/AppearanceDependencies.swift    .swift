@@ -35,7 +35,7 @@ import UIKit
 
 // MARS: - BTN
 @IBDesignable class RoButton: UIButton {
-    @IBInspectable var cRadius: CGFloat = 3.33 {
+    @IBInspectable var cRadio: CGFloat = 3.33 {
         didSet {
-            self.layer.cornerRadius = cRadius
+            self.layer.cornerRadius = cRadio
     }}}

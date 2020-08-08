@@ -24,7 +24,7 @@ class SigmaInnViewController: UIViewController {
     
     func gidConfigurationHelper() {
         GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+ //       GIDSignIn.sharedInstance()?.restorePreviousSignIn()
     }   
 
     @IBAction func sigmaInnAction(_ sender: UIButton) {

@@ -6,7 +6,6 @@
 //  Copyright © 2020 Jerry Ren. All rights reserved.
 //
 
-import Firebase
 import UIKit
 import Foundation
 import FirebaseDatabase
@@ -14,7 +13,6 @@ import FirebaseAuth
 
 class FreshedKaoViewController: UIViewController {
     
-
     @IBOutlet weak var pokeFiTextLabel: UILabel!
     
     override func viewDidLoad() {
@@ -28,7 +26,7 @@ class FreshedKaoViewController: UIViewController {
     
     func refExperimentation() {
         
-        Auth.auth().createUser(withEmail: "kinsa@kinsa.com", password: "kinsakinsa") { (result, erro) in
+        Auth.auth().createUser(withEmail: "kis@kis.com", password: "kiskis") { (result, erro) in
             if erro != nil {
                 print(erro?.localizedDescription)
                 return
@@ -37,19 +35,25 @@ class FreshedKaoViewController: UIViewController {
                 
                 let ufoReference = experimentalRef.child("UFO")
                 
-                guard let ufoUID = result?.user.uid else { return }
+                // MARS: -
+                
+                guard let ufoUID = result?.user.uid else { return }  // of Auth.auth().currentUser?.uid (约等于)
+                guard let ufoUIDSecondVersion = Auth.auth().currentUser?.uid else { return }
                 print("ufoUID is", ufoUID)
+                print("ufoUIDSecondVersion is", ufoUIDSecondVersion)
+                
+                // MARS: -
                 
                 let newUfoReference = ufoReference.child(ufoUID)
                 
-                let ufoDict = ["ufoName":  "KinsaBia", "ufoEmail": "kinsa@kinsa.com"]
+                let ufoDict = ["ufoName":  "KisBia", "ufoEmail": "kis@kis.com"]
                 newUfoReference.setValue(ufoDict)
                 
                 print("description is", newUfoReference.description())
             }
         }
         
-    }
+    }     
     
     
     

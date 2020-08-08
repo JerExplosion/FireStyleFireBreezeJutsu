@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import Firebase
+// import Firebase
 import GoogleSignIn
-import FirebaseAnalytics
 import FirebaseDatabase
 
 class ViewController: UIViewController {
