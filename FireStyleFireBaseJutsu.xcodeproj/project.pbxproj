@@ -10,7 +10,9 @@
 		8F42E65E24D0D37D0078F26A /* DataCoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F42E65D24D0D37D0078F26A /* DataCoreViewModel.swift */; };
 		8F57B1B824D9ADBB0093BAA6 /* KiKaMoEdeNoo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57B1B724D9ADBA0093BAA6 /* KiKaMoEdeNoo.swift */; };
 		8F57B1C424DA478B0093BAA6 /* TxtFEffec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57B1C324DA478B0093BAA6 /* TxtFEffec.swift */; };
+		8F64093224DDE02300ACEEE1 /* RefreshingRefreshExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64093124DDE02300ACEEE1 /* RefreshingRefreshExtension.swift */; };
 		8F7F21F924D21567003113CF /* XJViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7F21F824D21567003113CF /* XJViewController.swift */; };
+		8F9D14AC24DE2CB90019E548 /* FreshedKaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D14AB24DE2CB90019E548 /* FreshedKaoViewController.swift */; };
 		8FAD650E24D28B94008A4A28 /* InFoCello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD650D24D28B94008A4A28 /* InFoCello.swift */; };
 		8FBD64EC24CF661500075A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD64EB24CF661500075A4F /* AppDelegate.swift */; };
 		8FBD64EE24CF661600075A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD64ED24CF661600075A4F /* SceneDelegate.swift */; };
@@ -36,7 +38,9 @@
 		8F42E65D24D0D37D0078F26A /* DataCoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoreViewModel.swift; sourceTree = "<group>"; };
 		8F57B1B724D9ADBA0093BAA6 /* KiKaMoEdeNoo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiKaMoEdeNoo.swift; sourceTree = "<group>"; };
 		8F57B1C324DA478B0093BAA6 /* TxtFEffec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxtFEffec.swift; sourceTree = "<group>"; };
+		8F64093124DDE02300ACEEE1 /* RefreshingRefreshExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshingRefreshExtension.swift; sourceTree = "<group>"; };
 		8F7F21F824D21567003113CF /* XJViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XJViewController.swift; sourceTree = "<group>"; };
+		8F9D14AB24DE2CB90019E548 /* FreshedKaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshedKaoViewController.swift; sourceTree = "<group>"; };
 		8FAD650D24D28B94008A4A28 /* InFoCello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InFoCello.swift; sourceTree = "<group>"; };
 		8FBD64E824CF661500075A4F /* FireStyleFireBaseJutsu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireStyleFireBaseJutsu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBD64EB24CF661500075A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 				8FBD64EF24CF661600075A4F /* ViewController.swift */,
 				8F7F21F824D21567003113CF /* XJViewController.swift */,
 				8FD47FBC24D095AA00235FFE /* SigmaInnViewController.swift */,
+				8F9D14AB24DE2CB90019E548 /* FreshedKaoViewController.swift */,
+				8F64093124DDE02300ACEEE1 /* RefreshingRefreshExtension.swift */,
 			);
 			path = "On Fire";
 			sourceTree = "<group>";
@@ -332,7 +338,9 @@
 				8F7F21F924D21567003113CF /* XJViewController.swift in Sources */,
 				8F42E65E24D0D37D0078F26A /* DataCoreViewModel.swift in Sources */,
 				8FD47FBD24D095AA00235FFE /* SigmaInnViewController.swift in Sources */,
+				8F64093224DDE02300ACEEE1 /* RefreshingRefreshExtension.swift in Sources */,
 				8FBD64F024CF661600075A4F /* ViewController.swift in Sources */,
+				8F9D14AC24DE2CB90019E548 /* FreshedKaoViewController.swift in Sources */,
 				8FD5CA7D24D7CB39002E8176 /* NSUser.swift in Sources */,
 				8FBD64EC24CF661500075A4F /* AppDelegate.swift in Sources */,
 				8F57B1B824D9ADBB0093BAA6 /* KiKaMoEdeNoo.swift in Sources */,

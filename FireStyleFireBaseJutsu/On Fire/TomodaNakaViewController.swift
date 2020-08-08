@@ -28,7 +28,7 @@ class TomodaNakaViewController: UIViewController {
         super.viewDidLoad()
         presentFriendzTable.dataSource = self
         
-        newSetUpFriendBoat(targetEmail: "whattheheck@whattheheck.com")
+    //    newSetUpFriendBoat(targetEmail: "whattheheck@whattheheck.com")
     }
     
     override func viewWillAppear(_ animated: Bool) {
