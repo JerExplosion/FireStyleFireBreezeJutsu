@@ -143,8 +143,8 @@
 				8FBD64EF24CF661600075A4F /* ViewController.swift */,
 				8F7F21F824D21567003113CF /* XJViewController.swift */,
 				8FD47FBC24D095AA00235FFE /* SigmaInnViewController.swift */,
-				8F9D14AB24DE2CB90019E548 /* FreshedKaoViewController.swift */,
 				8F64093124DDE02300ACEEE1 /* RefreshingRefreshExtension.swift */,
+				8F9D14AB24DE2CB90019E548 /* FreshedKaoViewController.swift */,
 			);
 			path = "On Fire";
 			sourceTree = "<group>";

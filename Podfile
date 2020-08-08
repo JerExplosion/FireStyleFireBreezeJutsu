@@ -8,9 +8,10 @@ target 'FireStyleFireBaseJutsu' do
   # Pods for FireStyleFireBaseJutsu
 
     pod 'Firebase/Database'
+    pod 'Firebase/Storage'
 
-    pod 'Firebase/Crashlytics'
-    pod 'Firebase/Analytics'
+  #  pod 'Firebase/Crashlytics'
+  #  pod 'Firebase/Analytics'
 
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
