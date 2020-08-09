@@ -50,7 +50,6 @@ class ImagerySharingViewController: UIViewController {
         present(pickaControla, animated: true, completion: nil)
     }
     
-
     @IBAction func shareUpAction(_ sender: UIButton) {
         upIntoTheStormyCloud()
         // put an acitivityIndicator later

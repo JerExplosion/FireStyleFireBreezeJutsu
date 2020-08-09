@@ -20,7 +20,6 @@ class FreshedKaoViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         animatePokeFi()
         
-        
         refExperimentation()
     }
     

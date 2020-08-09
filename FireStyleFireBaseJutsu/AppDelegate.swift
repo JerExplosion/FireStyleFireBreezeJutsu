@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
       let email = user.profile.email
         
       print([userId, idToken, fullName, givenName, familyName, email])
-        // simply to get rid of the warning
+        // simply to get rid of the warning haha
         
       let img = user.profile.imageURL(withDimension: 150)
         
@@ -59,7 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 //        
 //        self.ref.child("users").child(user.userID).setValue(["userId": user.userID])
         
-
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
@@ -67,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
       // Perform any operations when the user disconnects from app here.
       // ...
     }
-    // is this one necessary?
+    // is this one necessary though?
     
     
     @available(iOS 9.0, *)
@@ -86,7 +85,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         FirebaseApp.configure()
         
         // MARS: - Database part
-
         ref = Database.database().reference()
         
         // MARS: - Google sign in part

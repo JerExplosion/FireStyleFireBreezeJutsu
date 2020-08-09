@@ -32,7 +32,6 @@ extension ImagerySharingViewController {
         
         guard let currentUserUID = currentUserUID else { return }
         
-        
         if let imgForShare = selectedImgForStormy, let imgForShareUploadData = imgForShare.jpegData(compressionQuality: 0.1) {
             
             let picIDString = NSUUID().uuidString
@@ -82,14 +81,16 @@ extension ImagerySharingViewController {
         
         let newSharedPostReference = sharedPostsCollectionReference.child(newSharedPostID)
         
-        newSharedPostReference.setValue(["picURL" : picURL]) { (erro, dBaseRef) in
+        guard let posterUID = currentUserUID else { return }
+                  
+        newSharedPostReference.setValue(["picURL" : picURL, "poster": posterUID]) { (erro, dBaseRef) in
             if erro != nil {
                 print("SharedPost value-setting failed", erro?.localizedDescription)
                 return
             }
             print("SharedPost value-setting succeeded")
             
-            self.shareUpLabel.text = "Yay"
+            self.shareUpLabel.text = "Success !"
             self.shareableImagery.image = UIImage(systemName: "checkmark.circle.fill")
             
             // self.tabBarController?.selectedIndex = 0 // customize this later

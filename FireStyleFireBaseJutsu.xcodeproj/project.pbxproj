@@ -13,6 +13,7 @@
 		8F57B1B824D9ADBB0093BAA6 /* KiKaMoEdeNoo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57B1B724D9ADBA0093BAA6 /* KiKaMoEdeNoo.swift */; };
 		8F57B1C424DA478B0093BAA6 /* TxtFEffec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57B1C324DA478B0093BAA6 /* TxtFEffec.swift */; };
 		8F64093224DDE02300ACEEE1 /* XJProfileImageryPicka.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64093124DDE02300ACEEE1 /* XJProfileImageryPicka.swift */; };
+		8F7215B324E0640F00AB87F3 /* AddiFeectivedCello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7215B224E0640F00AB87F3 /* AddiFeectivedCello.swift */; };
 		8F7F21F924D21567003113CF /* XJViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7F21F824D21567003113CF /* XJViewController.swift */; };
 		8F9D14AC24DE2CB90019E548 /* FreshedKaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D14AB24DE2CB90019E548 /* FreshedKaoViewController.swift */; };
 		8FAD650E24D28B94008A4A28 /* InFoCello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD650D24D28B94008A4A28 /* InFoCello.swift */; };
@@ -32,6 +33,8 @@
 		8FD47FC524D0BEB100235FFE /* VirtualContacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8FD47FC324D0BEB100235FFE /* VirtualContacts.xcdatamodeld */; };
 		8FD5CA7D24D7CB39002E8176 /* NSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD5CA7C24D7CB39002E8176 /* NSUser.swift */; };
 		8FD5CA8024D7CF61002E8176 /* CurrentFriendzTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD5CA7F24D7CF61002E8176 /* CurrentFriendzTable.swift */; };
+		8FDEDEE624DF9C22005CEEBD /* AddiFeectivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDEDEE524DF9C22005CEEBD /* AddiFeectivedViewController.swift */; };
+		8FDEDEE824DFA531005CEEBD /* NSPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDEDEE724DFA531005CEEBD /* NSPost.swift */; };
 		A6AA9E5D5CEEE7D3BC5C1AD0 /* Pods_FireStyleFireBaseJutsu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971B37DD6576146E18A8DC09 /* Pods_FireStyleFireBaseJutsu.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,7 @@
 		8F57B1B724D9ADBA0093BAA6 /* KiKaMoEdeNoo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiKaMoEdeNoo.swift; sourceTree = "<group>"; };
 		8F57B1C324DA478B0093BAA6 /* TxtFEffec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxtFEffec.swift; sourceTree = "<group>"; };
 		8F64093124DDE02300ACEEE1 /* XJProfileImageryPicka.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XJProfileImageryPicka.swift; sourceTree = "<group>"; };
+		8F7215B224E0640F00AB87F3 /* AddiFeectivedCello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddiFeectivedCello.swift; sourceTree = "<group>"; };
 		8F7F21F824D21567003113CF /* XJViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XJViewController.swift; sourceTree = "<group>"; };
 		8F9D14AB24DE2CB90019E548 /* FreshedKaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshedKaoViewController.swift; sourceTree = "<group>"; };
 		8FAD650D24D28B94008A4A28 /* InFoCello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InFoCello.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		8FD47FC424D0BEB100235FFE /* VirtualContacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VirtualContacts.xcdatamodel; sourceTree = "<group>"; };
 		8FD5CA7C24D7CB39002E8176 /* NSUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUser.swift; sourceTree = "<group>"; };
 		8FD5CA7F24D7CF61002E8176 /* CurrentFriendzTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentFriendzTable.swift; sourceTree = "<group>"; };
+		8FDEDEE524DF9C22005CEEBD /* AddiFeectivedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddiFeectivedViewController.swift; sourceTree = "<group>"; };
+		8FDEDEE724DFA531005CEEBD /* NSPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPost.swift; sourceTree = "<group>"; };
 		971B37DD6576146E18A8DC09 /* Pods_FireStyleFireBaseJutsu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireStyleFireBaseJutsu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF1735016E541580C50A3EA6 /* Pods-FireStyleFireBaseJutsu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireStyleFireBaseJutsu.release.xcconfig"; path = "Target Support Files/Pods-FireStyleFireBaseJutsu/Pods-FireStyleFireBaseJutsu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				8FBD650524CF75FE00075A4F /* AppearanceDependencies.swift    .swift */,
+				8F7215B224E0640F00AB87F3 /* AddiFeectivedCello.swift */,
 				8FAD650D24D28B94008A4A28 /* InFoCello.swift */,
 				8F57B1B724D9ADBA0093BAA6 /* KiKaMoEdeNoo.swift */,
 				8F57B1C324DA478B0093BAA6 /* TxtFEffec.swift */,
@@ -151,6 +158,7 @@
 				8F4DE6F424DF495200C31D80 /* ImagerySharingPickaExtension.swift */,
 				8F9D14AB24DE2CB90019E548 /* FreshedKaoViewController.swift */,
 				8FD47FBC24D095AA00235FFE /* SigmaInnViewController.swift */,
+				8FDEDEE524DF9C22005CEEBD /* AddiFeectivedViewController.swift */,
 			);
 			path = "On Fire";
 			sourceTree = "<group>";
@@ -159,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				8FD5CA7C24D7CB39002E8176 /* NSUser.swift */,
+				8FDEDEE724DFA531005CEEBD /* NSPost.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -334,6 +343,7 @@
 			files = (
 				8FD47FC024D0B57300235FFE /* InFoViewController.swift in Sources */,
 				8FBD650624CF75FF00075A4F /* AppearanceDependencies.swift    .swift in Sources */,
+				8FDEDEE824DFA531005CEEBD /* NSPost.swift in Sources */,
 				8FD47FC524D0BEB100235FFE /* VirtualContacts.xcdatamodeld in Sources */,
 				8FD47FC224D0B7DD00235FFE /* PersistenceRelevant.swift in Sources */,
 				8FD5CA8024D7CF61002E8176 /* CurrentFriendzTable.swift in Sources */,
@@ -342,6 +352,7 @@
 				8FC0C09024D63D510039F5A6 /* TomodaNakaViewController.swift in Sources */,
 				8F57B1C424DA478B0093BAA6 /* TxtFEffec.swift in Sources */,
 				8FAD650E24D28B94008A4A28 /* InFoCello.swift in Sources */,
+				8F7215B324E0640F00AB87F3 /* AddiFeectivedCello.swift in Sources */,
 				8F7F21F924D21567003113CF /* XJViewController.swift in Sources */,
 				8F42E65E24D0D37D0078F26A /* DataCoreViewModel.swift in Sources */,
 				8F4DE6F524DF495200C31D80 /* ImagerySharingPickaExtension.swift in Sources */,
@@ -352,6 +363,7 @@
 				8FD5CA7D24D7CB39002E8176 /* NSUser.swift in Sources */,
 				8FBD64EC24CF661500075A4F /* AppDelegate.swift in Sources */,
 				8F57B1B824D9ADBB0093BAA6 /* KiKaMoEdeNoo.swift in Sources */,
+				8FDEDEE624DF9C22005CEEBD /* AddiFeectivedViewController.swift in Sources */,
 				8FBD64EE24CF661600075A4F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

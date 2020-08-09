@@ -17,9 +17,7 @@ import Firebase
 class XJViewController: UIViewController {
     
     let signedInUserUID = Auth.auth().currentUser?.uid
-    
-    let fireBreezeProfileImageryStorageReference = Storage.storage().reference(forURL: "gs://fir-bniyon.appspot.com").child("ProfileImagery")
-    
+      
     @IBOutlet weak var profileImagery: UIImageView!
     var selectedImgForStorm: UIImage?
     
@@ -60,3 +58,6 @@ class XJViewController: UIViewController {
 // img-picker-uploader -> StorageFire
 
 // protocol NotificPacific { }
+
+//var profileIDString = NSUUID().uuidString
+//lazy var fireBreezeProfileImageryStorageReference = Storage.storage().reference(forURL: "gs://fir-bniyon.appspot.com").child("ProfileImagery").child(profileIDString)

@@ -28,6 +28,9 @@ extension XJViewController: UINavigationControllerDelegate, UIImagePickerControl
         
         if let profileImgForUpload = selectedImgForStorm, let imgUploadData = profileImgForUpload.jpegData(compressionQuality: 0.1) {
             
+            let profileIDString = NSUUID().uuidString
+            let fireBreezeProfileImageryStorageReference = Storage.storage().reference(forURL: "gs://fir-bniyon.appspot.com").child("ProfileImagery").child(profileIDString)
+            
             fireBreezeProfileImageryStorageReference.putData(imgUploadData, metadata: nil) { (storageMetadata, erro) in
                 
                 let imgSize = storageMetadata?.size
@@ -40,30 +43,30 @@ extension XJViewController: UINavigationControllerDelegate, UIImagePickerControl
                     return
                 } else {
                     
-                    self.fireBreezeProfileImageryStorageReference.downloadURL { (url, erro) in
+                    fireBreezeProfileImageryStorageReference.downloadURL { (url, erro) in
                         guard let downloadURLString = url?.absoluteString else {
                             print("downloadURL getter failed")
                             return }
                         print("downloadURLString is", downloadURLString)
                         
-                        // MARS: - 参考 freshedKao
+                        // MARS: - 参 freshedKao
                         
                         let experimentalRef = Database.database().reference()
                         let ufoRef = experimentalRef.child("UFO")
                         let newUFORef = ufoRef.child(signedInUserUID)
                         newUFORef.updateChildValues(["ufoProfileURL": downloadURLString])
                         
-                        // MARS: - freshedKao 参考
+                        // MARS: - freshedKao 参
                     }
                 }
             }
         }
         
-        print("did finish picking callled  ddddd ddddddd")
+        print("did finish picking callled  eddeddedde")
         dismiss(animated: true, completion: nil)
     }
 }
 
 
 
-
+         
