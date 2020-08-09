@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rPV-lM-Kim">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xsd-Ey-GRJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -98,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qC5-8i-g3D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686.9565217391305" y="868.52678571428567"/>
+            <point key="canvasLocation" x="2597.1014492753625" y="868.52678571428567"/>
         </scene>
         <!--XJ View Controller-->
         <scene sceneID="zUg-1e-YCm">
@@ -149,6 +149,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="MEH-UL-mFM"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profilin'" id="4qX-ce-YaN"/>
                     <navigationItem key="navigationItem" id="9Q2-Uv-60N"/>
                     <connections>
                         <outlet property="profileImagery" destination="NzC-j8-lS8" id="70I-Ye-u0G"/>
@@ -156,7 +157,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8uT-UX-hTI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4614.4927536231889" y="991.74107142857133"/>
+            <point key="canvasLocation" x="-3558" y="676"/>
+        </scene>
+        <!--Postin'-->
+        <scene sceneID="awL-UE-ES5">
+            <objects>
+                <viewController id="EsR-m5-ti8" customClass="ImagerySharingViewController" customModule="FireStyleFireBaseJutsu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jq2-l9-lpH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JRC-5K-gzE">
+                                <rect key="frame" x="57" y="235" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.81960784310000001" green="0.94117647059999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssz-9s-KX0" customClass="RoButton" customModule="FireStyleFireBaseJutsu" customModuleProvider="target">
+                                <rect key="frame" x="110" y="595" width="194" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cRadio">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shareUpAction:" destination="EsR-m5-ti8" eventType="touchUpInside" id="K7w-4k-fKH"/>
+                                    <action selector="signaUpAction:" destination="sDI-Db-ZBb" eventType="touchUpInside" id="yLN-zh-mIY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What do you have in mind today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj9-rF-1a5">
+                                <rect key="frame" x="62" y="178" width="291" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="7Gy-wq-6ZI"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Postin'" id="u0G-Nd-4B1"/>
+                    <connections>
+                        <outlet property="shareUpButton" destination="ssz-9s-KX0" id="XEH-8y-twz"/>
+                        <outlet property="shareUpLabel" destination="vj9-rF-1a5" id="uzM-dp-3qF"/>
+                        <outlet property="shareableImagery" destination="JRC-5K-gzE" id="9ip-zF-cOd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BzQ-Yy-u0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4204" y="1270"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZFI-nI-IhJ">
@@ -174,7 +228,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4NC-fR-1Fb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="676.81159420289862" y="951.5625"/>
+            <point key="canvasLocation" x="1586.9565217391305" y="951.5625"/>
         </scene>
         <!--Signa Upp View Controller-->
         <scene sceneID="Bvv-w9-XxW">
@@ -393,7 +447,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PyS-cA-fkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2404" y="1168"/>
+            <point key="canvasLocation" x="2384" y="-111"/>
         </scene>
         <!--Tomoda Naka View Controller-->
         <scene sceneID="dXz-ja-1tt">
@@ -665,7 +719,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvg-jU-g27" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="393" y="-360"/>
+            <point key="canvasLocation" x="1003" y="-283"/>
         </scene>
         <!--Freshed Kao View Controller-->
         <scene sceneID="iF5-Yn-afW">
@@ -747,11 +801,30 @@
             </objects>
             <point key="canvasLocation" x="-5886" y="-282"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="HGq-jN-MWZ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nHs-9O-Q5t" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vae-Y0-01e">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="EsR-m5-ti8" kind="relationship" relationship="viewControllers" id="ldn-mj-Aha"/>
+                        <segue destination="rPV-lM-Kim" kind="relationship" relationship="viewControllers" id="sCR-Ab-NvC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jfg-JM-38S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5354" y="925"/>
+        </scene>
     </scenes>
     <resources>
         <image name="HinataQ" width="786" height="1017"/>
         <image name="Rin" width="500" height="500"/>
         <image name="Svalbard Arctic" width="1920" height="1080"/>
+        <image name="camera.circle" catalog="system" width="128" height="121"/>
         <image name="google.png" width="18" height="18"/>
         <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="101"/>
         <image name="squirtletle" width="654" height="639"/>

@@ -53,11 +53,8 @@ extension XJViewController: UINavigationControllerDelegate, UIImagePickerControl
                         let newUFORef = ufoRef.child(signedInUserUID)
                         newUFORef.updateChildValues(["ufoProfileURL": downloadURLString])
                         
-                        // MARS: -
-                        
+                        // MARS: - freshedKao 参考
                     }
-                    
-                    
                 }
             }
         }
@@ -65,7 +62,6 @@ extension XJViewController: UINavigationControllerDelegate, UIImagePickerControl
         print("did finish picking callled  ddddd ddddddd")
         dismiss(animated: true, completion: nil)
     }
-          
 }
 
 

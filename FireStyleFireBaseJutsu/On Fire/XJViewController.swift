@@ -40,9 +40,7 @@ class XJViewController: UIViewController {
     }
     
     @objc func profileImgSelectorMethod() {
-        
-        print("Tppppededdddddd")
-        
+
         let pickaControl = UIImagePickerController.init()
         pickaControl.sourceType = .photoLibrary
         pickaControl.allowsEditing = true
@@ -53,28 +51,7 @@ class XJViewController: UIViewController {
     @IBAction func addingPicTouched(_ sender: UIButton) {
         profileImgSelectorMethod()
     }
-    
-    
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // let firebreezeStorageReference = Storage.storage().reference(forURL: "gs://fir-bniyon.appspot.com")
