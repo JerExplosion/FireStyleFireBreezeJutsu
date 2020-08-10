@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// imageryPull( ) seems to have some performance issues, perhaps threading & asynchronicity related, shift to ImageryCacheTechnique class for now
+            
 extension UIImageView {
     
     func imageryPull( picURL: String) {

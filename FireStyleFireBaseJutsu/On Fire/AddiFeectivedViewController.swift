@@ -58,8 +58,7 @@ extension AddiFeectivedViewController {
             
             self.addiFeectTableView.reloadData()
         })
-        
-    }
+    } // decent start of refactorization but fetchPosts ain't used anywhere yet
 }
         
 extension AddiFeectivedViewController: UITableViewDataSource, UITableViewDelegate {
@@ -72,11 +71,25 @@ extension AddiFeectivedViewController: UITableViewDataSource, UITableViewDelegat
             return UITableViewCell.init() }
         
         let thisSpecificPost = postsHolder[indexPath.row]
-        let imageryURL = thisSpecificPost.picURL
         let poster = thisSpecificPost.poster
         let imageryCaption = thisSpecificPost.caption
-    
-        cello.addiFeectivedImagery.imageryPull( picURL: imageryURL)
+        
+        let imageryURLString = thisSpecificPost.picURL
+        let imageryURL = URL(string: imageryURLString)
+        
+        
+        // MARS: - supposed to work but dissapointing
+        ImageryCache.shared.fetchImigi(url: imageryURL!, callBack: {
+            (image) in
+            cello.addiFeectivedProfilePicture.image = image
+            print("image cache called")
+        })
+        // MARS: -
+        
+        
+        cello.addiFeectivedImagery.imageryPull( picURL: imageryURLString)
+        // (older way - works but performance not maximized)
+           
         cello.addiFeectivedUserName.text = poster
         cello.addiFeectivedCaptionLabel.text = imageryCaption
         let pikachuGIF = UIImage.gifImageWithName("SurprisedPikachu")

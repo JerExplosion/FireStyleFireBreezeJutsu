@@ -205,7 +205,7 @@
                                 <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter Caption" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L2Y-WA-mKD" customClass="TextViewWithPlaceholder" customModule="FireStyleFireBaseJutsu" customModuleProvider="target">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="E C" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L2Y-WA-mKD" customClass="TxtViewWitPHolder" customModule="FireStyleFireBaseJutsu" customModuleProvider="target">
                                 <rect key="frame" x="87" y="492" width="240" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -213,7 +213,7 @@
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Enter Caption"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="pHolderTxt" value="Enter Caption"/>
                                 </userDefinedRuntimeAttributes>
                             </textView>
                         </subviews>

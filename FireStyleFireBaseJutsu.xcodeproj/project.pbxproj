@@ -18,11 +18,12 @@
 		8F67420E24E136E20067E019 /* HandlingGIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F67420D24E136E20067E019 /* HandlingGIF.swift */; };
 		8F6F884224E199E400410923 /* FormulaAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F884124E199E400410923 /* FormulaAlert.swift */; };
 		8F6F884424E1A8D600410923 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F884324E1A8D600410923 /* FirebaseManager.swift */; };
-		8F6F884624E1C03300410923 /* TextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F884524E1C03300410923 /* TextViewExtension.swift */; };
+		8F6F884624E1C03300410923 /* TxtViewPHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F884524E1C03300410923 /* TxtViewPHolder.swift */; };
 		8F7215B324E0640F00AB87F3 /* AddiFeectivedCello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7215B224E0640F00AB87F3 /* AddiFeectivedCello.swift */; };
 		8F7215B524E08B7400AB87F3 /* ImageryPull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7215B424E08B7400AB87F3 /* ImageryPull.swift */; };
 		8F7F21F924D21567003113CF /* XJViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7F21F824D21567003113CF /* XJViewController.swift */; };
 		8F9D14AC24DE2CB90019E548 /* FreshedKaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D14AB24DE2CB90019E548 /* FreshedKaoViewController.swift */; };
+		8FA2CD8024E1F8C200A3DF1C /* ImageryCacheTechnique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA2CD7F24E1F8C200A3DF1C /* ImageryCacheTechnique.swift */; };
 		8FAD650E24D28B94008A4A28 /* InFoCello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD650D24D28B94008A4A28 /* InFoCello.swift */; };
 		8FBD64EC24CF661500075A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD64EB24CF661500075A4F /* AppDelegate.swift */; };
 		8FBD64EE24CF661600075A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD64ED24CF661600075A4F /* SceneDelegate.swift */; };
@@ -58,11 +59,12 @@
 		8F67420D24E136E20067E019 /* HandlingGIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandlingGIF.swift; sourceTree = "<group>"; };
 		8F6F884124E199E400410923 /* FormulaAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaAlert.swift; sourceTree = "<group>"; };
 		8F6F884324E1A8D600410923 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
-		8F6F884524E1C03300410923 /* TextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewExtension.swift; sourceTree = "<group>"; };
+		8F6F884524E1C03300410923 /* TxtViewPHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxtViewPHolder.swift; sourceTree = "<group>"; };
 		8F7215B224E0640F00AB87F3 /* AddiFeectivedCello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddiFeectivedCello.swift; sourceTree = "<group>"; };
 		8F7215B424E08B7400AB87F3 /* ImageryPull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageryPull.swift; sourceTree = "<group>"; };
 		8F7F21F824D21567003113CF /* XJViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XJViewController.swift; sourceTree = "<group>"; };
 		8F9D14AB24DE2CB90019E548 /* FreshedKaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshedKaoViewController.swift; sourceTree = "<group>"; };
+		8FA2CD7F24E1F8C200A3DF1C /* ImageryCacheTechnique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageryCacheTechnique.swift; sourceTree = "<group>"; };
 		8FAD650D24D28B94008A4A28 /* InFoCello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InFoCello.swift; sourceTree = "<group>"; };
 		8FBD64E824CF661500075A4F /* FireStyleFireBaseJutsu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireStyleFireBaseJutsu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBD64EB24CF661500075A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,11 +122,20 @@
 				8F6F884124E199E400410923 /* FormulaAlert.swift */,
 				8F67420D24E136E20067E019 /* HandlingGIF.swift */,
 				8F57B1B724D9ADBA0093BAA6 /* KiKaMoEdeNoo.swift */,
-				8F6F884524E1C03300410923 /* TextViewExtension.swift */,
+				8F6F884524E1C03300410923 /* TxtViewPHolder.swift */,
 				8F57B1C324DA478B0093BAA6 /* TxtFEffec.swift */,
 				8F67420B24E136AC0067E019 /* SurprisedPikachu.gif */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8FA2CD8124E1FF4900A3DF1C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8F7215B424E08B7400AB87F3 /* ImageryPull.swift */,
+				8FA2CD7F24E1F8C200A3DF1C /* ImageryCacheTechnique.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		8FBD64DF24CF661500075A4F = {
@@ -153,6 +164,7 @@
 				8FD47FBE24D0B51800235FFE /* On Fire */,
 				8F42E66024D124AC0078F26A /* View */,
 				8FBD64F124CF661600075A4F /* Main.storyboard */,
+				8FA2CD8124E1FF4900A3DF1C /* Networking */,
 				8FD47FC324D0BEB100235FFE /* VirtualContacts.xcdatamodeld */,
 				8F42E65F24D1247F0078F26A /* DataCoreViewModel */,
 				8FBD64F424CF661900075A4F /* Assets.xcassets */,
@@ -186,7 +198,6 @@
 		8FD5CA7E24D7CCFC002E8176 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8F7215B424E08B7400AB87F3 /* ImageryPull.swift */,
 				8FD5CA7C24D7CB39002E8176 /* NSUser.swift */,
 				8FDEDEE724DFA531005CEEBD /* NSPost.swift */,
 			);
@@ -366,7 +377,7 @@
 				8FD47FC024D0B57300235FFE /* InFoViewController.swift in Sources */,
 				8FBD650624CF75FF00075A4F /* AppearanceDependencies.swift    .swift in Sources */,
 				8FDEDEE824DFA531005CEEBD /* NSPost.swift in Sources */,
-				8F6F884624E1C03300410923 /* TextViewExtension.swift in Sources */,
+				8F6F884624E1C03300410923 /* TxtViewPHolder.swift in Sources */,
 				8FD47FC524D0BEB100235FFE /* VirtualContacts.xcdatamodeld in Sources */,
 				8FD47FC224D0B7DD00235FFE /* PersistenceRelevant.swift in Sources */,
 				8FD5CA8024D7CF61002E8176 /* CurrentFriendzTable.swift in Sources */,
@@ -374,6 +385,7 @@
 				8F4DE6F324DF444D00C31D80 /* ImagerySharingViewController.swift in Sources */,
 				8F7215B524E08B7400AB87F3 /* ImageryPull.swift in Sources */,
 				8FC0C09024D63D510039F5A6 /* TomodaNakaViewController.swift in Sources */,
+				8FA2CD8024E1F8C200A3DF1C /* ImageryCacheTechnique.swift in Sources */,
 				8F67420E24E136E20067E019 /* HandlingGIF.swift in Sources */,
 				8F57B1C424DA478B0093BAA6 /* TxtFEffec.swift in Sources */,
 				8FAD650E24D28B94008A4A28 /* InFoCello.swift in Sources */,
