@@ -11,12 +11,13 @@ import FirebaseAuth
 import UIKit
 import FirebaseDatabase
 
-class ImagerySharingViewController: UIViewController {
+class ImagerySharingViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var shareableImagery: UIImageView!
     @IBOutlet weak var shareUpButton: UIButton!
     @IBOutlet weak var shareUpLabel: UILabel!
     
+    @IBOutlet weak var captionTextView: UITextView!
     var selectedImgForStormy: UIImage?
     
     let breezeShareableImageryStorageReference = Storage.storage().reference(forURL: "gs://fir-bniyon.appspot.com").child("PostsShared")
@@ -26,6 +27,8 @@ class ImagerySharingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.shareableImagery.image = UIImage(systemName: "camera.circle")
+        
+        captionTextView.delegate = self
 
         setupShareableImageryForPicking()
     }

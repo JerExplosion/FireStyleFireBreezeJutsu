@@ -12,7 +12,6 @@ import FirebaseAuth
 import GoogleSignIn
 import FirebaseDatabase
 
-
 class SignaUppViewController: UIViewController {
     
     var ref: DatabaseReference!
@@ -27,6 +26,9 @@ class SignaUppViewController: UIViewController {
         super.viewDidLoad()
         
         ref = Database.database().reference()
+        
+        let pikachuGIF = UIImage.gifImageWithName("SurprisedPikachu")
+        self.imgView.image = pikachuGIF
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
         // Automatically sign in the user.
@@ -46,8 +48,10 @@ class SignaUppViewController: UIViewController {
                 let image = UIImage(data: data)
                 DispatchQueue.main.async {
                     self.imgView.image = image
+                    self.sendToTabTab()
                 }
             }
+            
         }
     }
         
@@ -64,51 +68,83 @@ class SignaUppViewController: UIViewController {
         guard let uEm = uEmTextField.text else { return }
         guard let pCode = pCodeTextField.text else { return }
         
-
         Auth.auth().createUser(withEmail: uEm, password: pCode) { (authRes, error) in
-//            print("Auth result is: ", authRes)
+
             print("My error is \(error.debugDescription)")
-
-            guard let authedUser = Auth.auth().currentUser else { return }
             
-            print(authedUser.email)
-            print(authedUser.uid)
-            
-            let pUserUID = authedUser.uid
+            if let ergo = error {
+                print(ergo.localizedDescription)
+                let errorMessage = ergo.localizedDescription
+                
+                var validPasswordOrNaw = true
+                
+                if uEm.isEmpty {
+                    self.alertFormula(title: nil, message: "Enter an email address buddy", action: "Try again")
+                }
+                else if (uEm.isValidEmailOrNaw == false) {
+                    self.alertFormula(title: nil, message: "Enter a valid email address buddy", action: "Try again")
+                }
+                else if pCode.count < 6 {
+                    self.mustBeLongerThanSixCharsAlert()
+                }
+            }
 
-            let userInfoDict = ["UID": pUserUID, "Email":  uEm, " User Name": "Myth", "Friendz": ["So lonely in here"], "Friendz Count": 1] as [String : Any]
+            guard let authedUserUID = Auth.auth().currentUser?.uid else { return }
+            guard let pUserUID = authRes?.user.uid else { return }
+            
+            print(authedUserUID, "is authedUser different than pUser?", pUserUID)
+
+            let userInfoDict = ["uID": pUserUID, "email":  uEm, " userName": "mystery", "friendz": ["so lonely in here"], "friendzCount": 1] as [String : Any]
             
             self.ref.child("Users").child(pUserUID).setValue(userInfoDict)
+
+            print("successfully sending user  \(pUserUID)  to the cloud")
+            print("separator ------------------")
             
-            print("separator ------------------")
-            print(authedUser.uid)
-            print("successfully sending user  \(authedUser.email)  to the cloud")
-            print("separator ------------------")
+            self.sendToTabTab()
         }
     }
     
-    // MARS: -
+    func sendToTabTab() {
+        let sBoard = UIStoryboard.init(name: "Main", bundle: nil)
+             let tabTabViewController = sBoard.instantiateViewController(withIdentifier: "tabTabSBoardID")
+        navigationController?.crossDissolve(tabTabViewController)
+    }
+
     @IBAction func shiftToSignIn(_ sender: UIButton) {
+        let primaryStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
-    }
-    // MARS: -
-    
-    @IBAction func tempLogInAction(_ sender: UIButton) {
-        
-        guard let uEm = uEmTextField.text else { return }
-        guard let pCode = pCodeTextField.text else { return }
-        
-        Auth.auth().signIn(withEmail: uEm, password: pCode) { [weak self] (authRes, error) in
-            guard let selfStrong = self else { return }
-            
-            print("Auth result is: ", authRes)
-            print("My error is \(error.debugDescription)")
-            print(selfStrong)
-            
+        guard let destination = primaryStoryboard.instantiateViewController(withIdentifier: "inSBoardID") as? SigmaInnViewController else {
+            print("destination unclear bud")
+            return
         }
-        
+        navigationController?.crossDissolve(destination)
     }
 }
+
+extension SignaUppViewController {
+    
+    func mustBeLongerThanSixCharsAlert() {
+        let alertCon = UIAlertController(title: nil, message: "Passwords must be 6 characters or longer buddy", preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "Got it", style: .cancel, handler: nil)
+        alertCon.addAction(dismissAction)
+        present(alertCon, animated: true, completion: nil)
+    }
+           
+}
+
+extension String {
+    var isValidEmailOrNaw: Bool {
+        NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").evaluate(with: self)
+    }
+}
+
+
+
+
+
+
+
 
 // Client ID for Google sign
 // 943009449310-59gnroclfji4fuukkrha5t34pjnpqcj7.apps.googleusercontent.com
@@ -161,3 +197,19 @@ class SignaUppViewController: UIViewController {
 //
 //            // MARS: - Ordering data sample code
 //    //        let postsByMostPopular = ref.child("posts").queryOrdered(byChild: "metrics/views")
+
+//    @IBAction func tempLogInAction(_ sender: UIButton) {
+//
+//        guard let uEm = uEmTextField.text else { return }
+//        guard let pCode = pCodeTextField.text else { return }
+//
+//        Auth.auth().signIn(withEmail: uEm, password: pCode) { [weak self] (authRes, error) in
+//            guard let selfStrong = self else { return }
+//
+//            print("Auth result is: ", authRes)
+//            print("My error is \(error.debugDescription)")
+//            print(selfStrong)
+//
+//        }
+//
+//    }

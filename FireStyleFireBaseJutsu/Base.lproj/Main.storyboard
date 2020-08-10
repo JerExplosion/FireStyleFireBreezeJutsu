@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nHs-9O-Q5t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xsd-Ey-GRJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -111,7 +111,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgN-mU-sRF">
                                 <rect key="frame" x="154" y="228" width="120" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.86625105020000004" green="1" blue="0.98257499290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
                                 <state key="normal" title="Add Profile Picture">
                                     <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -127,16 +127,17 @@
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yb7-je-cFE">
-                                <rect key="frame" x="195" y="372" width="38" height="30"/>
+                                <rect key="frame" x="184" y="330" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
                                 <state key="normal" title="Enter"/>
                                 <connections>
                                     <action selector="shiftToSignUp:" destination="78G-oq-Oe6" eventType="touchUpInside" id="A95-bu-oj4"/>
+                                    <action selector="userNameEntryReturn:" destination="rPV-lM-Kim" eventType="touchUpInside" id="oMd-JI-cir"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bIK-bH-wjT" customClass="KaedeTextField" customModule="FireStyleFireBaseJutsu" customModuleProvider="target">
-                                <rect key="frame" x="37" y="335" width="354" height="34"/>
+                                <rect key="frame" x="37" y="293" width="354" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -146,13 +147,19 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="djb-F4-BHH">
+                                <rect key="frame" x="139" y="493" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.86625105020000004" green="1" blue="0.98257499290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="MEH-UL-mFM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="4qX-ce-YaN"/>
                     <navigationItem key="navigationItem" id="9Q2-Uv-60N"/>
                     <connections>
+                        <outlet property="kaedeUsernameTextfield" destination="bIK-bH-wjT" id="Is4-wg-rNl"/>
+                        <outlet property="pikachuImagery" destination="djb-F4-BHH" id="AyP-x3-eRW"/>
                         <outlet property="profileImagery" destination="NzC-j8-lS8" id="70I-Ye-u0G"/>
                     </connections>
                 </viewController>
@@ -160,7 +167,7 @@
             </objects>
             <point key="canvasLocation" x="-3559.420289855073" y="675"/>
         </scene>
-        <!--Postin'-->
+        <!--Compose-->
         <scene sceneID="awL-UE-ES5">
             <objects>
                 <viewController id="EsR-m5-ti8" customClass="ImagerySharingViewController" customModule="FireStyleFireBaseJutsu" customModuleProvider="target" sceneMemberID="viewController">
@@ -169,12 +176,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JRC-5K-gzE">
-                                <rect key="frame" x="57" y="235" width="300" height="300"/>
+                                <rect key="frame" x="57" y="183" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.81960784310000001" green="0.94117647059999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssz-9s-KX0" customClass="RoButton" customModule="FireStyleFireBaseJutsu" customModuleProvider="target">
-                                <rect key="frame" x="110" y="595" width="194" height="38"/>
+                                <rect key="frame" x="110" y="613" width="194" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
@@ -192,18 +199,30 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What do you have in mind today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj9-rF-1a5">
-                                <rect key="frame" x="62" y="178" width="291" height="30"/>
+                                <rect key="frame" x="62" y="126" width="291" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
                                 <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter Caption" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L2Y-WA-mKD" customClass="TextViewWithPlaceholder" customModule="FireStyleFireBaseJutsu" customModuleProvider="target">
+                                <rect key="frame" x="87" y="492" width="240" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Enter Caption"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="7Gy-wq-6ZI"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Postin'" id="u0G-Nd-4B1"/>
+                    <tabBarItem key="tabBarItem" title="Compose" id="u0G-Nd-4B1"/>
                     <connections>
+                        <outlet property="captionTextView" destination="L2Y-WA-mKD" id="c4g-dd-LK9"/>
                         <outlet property="shareUpButton" destination="ssz-9s-KX0" id="XEH-8y-twz"/>
                         <outlet property="shareUpLabel" destination="vj9-rF-1a5" id="uzM-dp-3qF"/>
                         <outlet property="shareableImagery" destination="JRC-5K-gzE" id="9ip-zF-cOd"/>
@@ -211,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BzQ-Yy-u0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4204" y="1270"/>
+            <point key="canvasLocation" x="-4204.347826086957" y="1269.6428571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZFI-nI-IhJ">
@@ -234,7 +253,7 @@
         <!--Signa Upp View Controller-->
         <scene sceneID="Bvv-w9-XxW">
             <objects>
-                <viewController id="sDI-Db-ZBb" customClass="SignaUppViewController" customModule="FireStyleFireBaseJutsu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="upSBoardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sDI-Db-ZBb" customClass="SignaUppViewController" customModule="FireStyleFireBaseJutsu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F2v-XL-Jqs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,7 +329,7 @@
                                 <rect key="frame" x="35" y="264.5" width="344" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cRadio">
                                         <real key="value" value="15"/>
@@ -341,22 +360,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydr-bZ-TC0">
-                                <rect key="frame" x="164" y="414" width="85" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
-                                <state key="normal" title="Tempo Log"/>
-                                <connections>
-                                    <action selector="tempLogInAction:" destination="sDI-Db-ZBb" eventType="touchUpInside" id="isB-N6-vHb"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cer-Tq-18e" customClass="GIDSignInButton">
                                 <rect key="frame" x="87" y="612" width="240" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HinataQ" translatesAutoresizingMaskIntoConstraints="NO" id="QUp-Dm-eKK">
-                                <rect key="frame" x="110" y="453" width="193" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SurprisedPikachu.gif" translatesAutoresizingMaskIntoConstraints="NO" id="QUp-Dm-eKK">
+                                <rect key="frame" x="143" y="453" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -551,7 +561,7 @@
         <!--Sigma Inn View Controller-->
         <scene sceneID="yqy-PZ-jlr">
             <objects>
-                <viewController id="78G-oq-Oe6" customClass="SigmaInnViewController" customModule="FireStyleFireBaseJutsu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="inSBoardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="78G-oq-Oe6" customClass="SigmaInnViewController" customModule="FireStyleFireBaseJutsu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x3y-9t-Y4Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -814,7 +824,7 @@
             </objects>
             <point key="canvasLocation" x="-5886" y="-282"/>
         </scene>
-        <!--Feeds-->
+        <!--Feed-->
         <scene sceneID="lv9-ET-2Hf">
             <objects>
                 <viewController id="J5Q-ve-rdq" customClass="AddiFeectivedViewController" customModule="FireStyleFireBaseJutsu" customModuleProvider="target" sceneMemberID="viewController">
@@ -855,7 +865,7 @@
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caption" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEO-Zj-jgH">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caption" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEO-Zj-jgH">
                                                     <rect key="frame" x="14" y="442" width="346" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="13"/>
@@ -873,11 +883,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What are your friendz up to?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEc-Pn-cqO">
+                                <rect key="frame" x="62" y="76" width="291" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="2uV-qw-J4N"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feeds" id="Qiq-kb-03J"/>
+                    <tabBarItem key="tabBarItem" title="Feed" id="Qiq-kb-03J"/>
                     <connections>
                         <outlet property="addiFeectTableView" destination="N5P-dq-Yv6" id="Zhj-OT-tK1"/>
                     </connections>
@@ -889,7 +906,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="HGq-jN-MWZ">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nHs-9O-Q5t" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabTabSBoardID" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nHs-9O-Q5t" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vae-Y0-01e">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -909,8 +926,8 @@
     </scenes>
     <resources>
         <image name="Dominican Republic Aerial" width="1200" height="800"/>
-        <image name="HinataQ" width="786" height="1017"/>
         <image name="Rin" width="500" height="500"/>
+        <image name="SurprisedPikachu.gif" width="500" height="500"/>
         <image name="Svalbard Arctic" width="1920" height="1080"/>
         <image name="camera.circle" catalog="system" width="128" height="121"/>
         <image name="google.png" width="18" height="18"/>

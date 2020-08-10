@@ -33,9 +33,10 @@ class AddiFeectivedViewController: UIViewController {
             // print(Thread.isMainThread)
             guard let snapDictio = dataSnap.value as? [String : Any] else { return }
             guard let picURL = snapDictio["picURL"] as? String else { return }
-            let poster = snapDictio["poster"] as? String ?? "Nintendo"
+            let poster = snapDictio["poster"] as? String ?? "Kingsley" // "Nintendo"
+            let caption = snapDictio["caption"] as? String ?? "Placeholder Caption"
             
-            let individualPost = NSPost(picURL: picURL, poster: poster)
+            let individualPost = NSPost(picURL: picURL, poster: poster, caption: caption)
             self.postsHolder.append(individualPost)
             
             self.postsHolder.reverse() 
@@ -50,15 +51,17 @@ extension AddiFeectivedViewController {
     
     func fetchPosts() {
         
-        Database.database().reference().child("PostsShared").queryOrderedByKey().observeSingleEvent(of: .childAdded) { (dataSnap) in
+        FirebaseManager.shared.fetchPosts(childID: "PostsShared", compHandle: { (dataSnap) in
             guard let snapDictio = dataSnap.value as? [String : Any] else { return }
             guard let picURL = snapDictio["picURL"] as? String else { return }
+            guard let caption = snapDictio["caption"] as? String else { return }
             
             self.addiFeectTableView.reloadData()
-        }
+        })
+        
     }
 }
-
+        
 extension AddiFeectivedViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,10 +74,14 @@ extension AddiFeectivedViewController: UITableViewDataSource, UITableViewDelegat
         let thisSpecificPost = postsHolder[indexPath.row]
         let imageryURL = thisSpecificPost.picURL
         let poster = thisSpecificPost.poster
+        let imageryCaption = thisSpecificPost.caption
     
         cello.addiFeectivedImagery.imageryPull( picURL: imageryURL)
         cello.addiFeectivedUserName.text = poster
- 
+        cello.addiFeectivedCaptionLabel.text = imageryCaption
+        let pikachuGIF = UIImage.gifImageWithName("SurprisedPikachu")
+        cello.addiFeectivedProfilePicture.image = pikachuGIF
+        
         return cello
     }
     

@@ -10,13 +10,15 @@ import UIKit
 
 @IBDesignable open class KaedeTextField: TextFieldEffects {
 
-    @IBInspectable dynamic open var placeholderColor: UIColor? {
+    @IBInspectable dynamic open var placeholderFontScale: CGFloat = 0.77 {
         didSet {
             updatePlaceholder()
         }
     }
+    
+    @IBInspectable dynamic open var placeholderSplit: CGFloat = 0.66
 
-    @IBInspectable dynamic open var placeholderFontScale: CGFloat = 0.8 {
+    override open var placeholder: String? {
         didSet {
             updatePlaceholder()
         }
@@ -27,10 +29,8 @@ import UIKit
             updateForegroundColor()
         }
     }
-
-    @IBInspectable dynamic open var placeholderSplit: CGFloat = 0.6
-
-    override open var placeholder: String? {
+    
+    @IBInspectable dynamic open var placeholderColor: UIColor? {
         didSet {
             updatePlaceholder()
         }
@@ -75,11 +75,11 @@ import UIKit
             directionOverride = 1.0
         }
 
-        UIView.animate(withDuration: 0.35, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 2.0, options: .beginFromCurrentState, animations: ({
+        UIView.animate(withDuration: 0.33, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 2.0, options: .beginFromCurrentState, animations: ({
             self.placeholderLabel.frame.origin = CGPoint(x: self.frame.size.width * (self.placeholderSplit + 0.05) * directionOverride, y: self.placeholderInsets.y)
         }), completion: nil)
 
-        UIView.animate(withDuration: 0.45, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 1.5, options: .beginFromCurrentState, animations: ({
+        UIView.animate(withDuration: 0.50, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 1.5, options: .beginFromCurrentState, animations: ({
             self.foregroundView.frame.origin = CGPoint(x: self.frame.size.width * self.placeholderSplit * directionOverride, y: 0)
         }), completion: { _ in
             self.animationCompletionHandler?(.textEntry)

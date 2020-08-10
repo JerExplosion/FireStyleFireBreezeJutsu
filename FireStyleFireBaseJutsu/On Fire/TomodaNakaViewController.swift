@@ -36,7 +36,6 @@ class TomodaNakaViewController: UIViewController {
     //    snatchUsers()
     }
     
-    
     func newSetUpFriendBoat(targetEmail: String) {
         
         ref = Database.database().reference()
@@ -44,7 +43,6 @@ class TomodaNakaViewController: UIViewController {
         ref?.child("Users").queryOrderedByKey().observeSingleEvent(of: .value, with: { (dSnapshot) in
             let userIDs = dSnapshot.value as! [String:AnyObject]
             
-
             print("Separator -----------------------")
             for userID in userIDs {
                 print("user email is ", userID.value["Email"])
@@ -54,7 +52,6 @@ class TomodaNakaViewController: UIViewController {
                     
                     self.ref?.child("Users").child(userID.key).updateChildValues([ "Friendz": [targetEmail] ])
      
-                    
                 } else {
                     print("TargetEmail not found")
                 }

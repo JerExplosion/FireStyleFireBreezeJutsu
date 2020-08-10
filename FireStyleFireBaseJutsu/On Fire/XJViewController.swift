@@ -14,17 +14,27 @@ import FirebaseDatabase
 import FirebaseAuth
 import Firebase
 
-class XJViewController: UIViewController {
+class XJViewController: UIViewController, UITextFieldDelegate {
     
     let signedInUserUID = Auth.auth().currentUser?.uid
       
+    @IBOutlet weak var pikachuImagery: UIImageView!
     @IBOutlet weak var profileImagery: UIImageView!
     var selectedImgForStorm: UIImage?
+    @IBOutlet weak var kaedeUsernameTextfield: KaedeTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupProfileImageryForPicking()
+        pickachuGIFLoader()
+        kaedeUsernameTextfield.delegate = self
+    }
+    
+    func pickachuGIFLoader() {
+        pikachuImagery.layer.cornerRadius = pikachuImagery.frame.height / 2
+        let pikachuGIF = UIImage.gifImageWithName("SurprisedPikachu")
+        self.pikachuImagery.image = pikachuGIF
     }
     
     func setupProfileImageryForPicking() {
@@ -44,6 +54,11 @@ class XJViewController: UIViewController {
         pickaControl.allowsEditing = true
         pickaControl.delegate = self
         present(pickaControl, animated: true, completion: nil)
+    }
+    
+    @IBAction func userNameEntryReturn(_ sender: UIButton) {
+        alertFormula(title: "Username Set!", message: nil, action: "Start Exploring")
+        kaedeUsernameTextfield.resignFirstResponder()
     }
     
     @IBAction func addingPicTouched(_ sender: UIButton) {

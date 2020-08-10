@@ -12,10 +12,12 @@ class NSPost {
     
     var picURL: String
     var poster: String
+    var caption: String
     
-    init(picURL: String, poster: String) {
+    init(picURL: String, poster: String, caption: String) {
         self.picURL = picURL
         self.poster = poster
+        self.caption = caption
     }
     
 }

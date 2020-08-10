@@ -41,14 +41,22 @@ class SigmaInnViewController: UIViewController {
             if error == nil {
                 
                 let sBoard = UIStoryboard.init(name: "Main", bundle: nil)
-                let xjViewController = sBoard.instantiateViewController(withIdentifier: "XJViewController")
-                strongerSelf.present(xjViewController, animated: true)
+                let tabTabViewController = sBoard.instantiateViewController(withIdentifier: "tabTabSBoardID")
+           //     strongerSelf.present(xjViewController, animated: true)
+                strongerSelf.navigationController?.crossDissolve(tabTabViewController)
             }
         }
     }
     
     @IBAction func shiftToSignUp(_ sender: UIButton) {
+
+        let primaryStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
+        guard let destination = primaryStoryboard.instantiateViewController(withIdentifier: "upSBoardID") as? SignaUppViewController else {
+            print("destination unclear bud")
+            return
+        }
+        navigationController?.crossDissolve(destination)
     }  
 }
 

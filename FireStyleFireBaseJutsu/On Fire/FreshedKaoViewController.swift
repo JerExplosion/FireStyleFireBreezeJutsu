@@ -19,13 +19,12 @@ class FreshedKaoViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         animatePokeFi()
-        
-        refExperimentation()
+
     }
     
     func refExperimentation() {
         
-        Auth.auth().createUser(withEmail: "kis@kis.com", password: "kiskis") { (result, erro) in
+        Auth.auth().createUser(withEmail: "kiikii@kiikii.com", password: "kiikii") { (result, erro) in
             if erro != nil {
                 print(erro?.localizedDescription)
                 return
@@ -51,15 +50,7 @@ class FreshedKaoViewController: UIViewController {
                 print("description is", newUfoReference.description())
             }
         }
-        
     }     
-    
-    
-    
-    
-    
-    
-    
     
     
     func animatePokeFi() {

@@ -56,7 +56,6 @@ extension ImagerySharingViewController {
                         self.sendDataUpToBaseFire(picURL: picChaURLString)
                     }
                 }
-                
             }
         }
     }
