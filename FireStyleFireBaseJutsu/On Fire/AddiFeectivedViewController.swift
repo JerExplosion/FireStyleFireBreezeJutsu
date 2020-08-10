@@ -23,21 +23,26 @@ class AddiFeectivedViewController: UIViewController {
         addiFeectTableView.dataSource = self
         
         freeLoader()
-
     }
     
     func freeLoader() {
         
-        Database.database().reference().child("PostsShared").observe(.childAdded) { (dataSnap: DataSnapshot) in
+        let freeLoaderRef = Database.database().reference()
+        
+        freeLoaderRef.child("PostsShared").queryOrderedByKey().observe(.childAdded) { (dataSnap: DataSnapshot) in
             // print(Thread.isMainThread)
             guard let snapDictio = dataSnap.value as? [String : Any] else { return }
             guard let picURL = snapDictio["picURL"] as? String else { return }
-
-            let individualPost = NSPost(picURL: picURL)
+            let poster = snapDictio["poster"] as? String ?? "Nintendo"
+            
+            let individualPost = NSPost(picURL: picURL, poster: poster)
             self.postsHolder.append(individualPost)
+            
+            self.postsHolder.reverse() 
             
             self.addiFeectTableView.reloadData()
         }
+        freeLoaderRef.removeAllObservers()
     }
 }
 
@@ -48,7 +53,8 @@ extension AddiFeectivedViewController {
         Database.database().reference().child("PostsShared").queryOrderedByKey().observeSingleEvent(of: .childAdded) { (dataSnap) in
             guard let snapDictio = dataSnap.value as? [String : Any] else { return }
             guard let picURL = snapDictio["picURL"] as? String else { return }
-
+            
+            self.addiFeectTableView.reloadData()
         }
     }
 }
@@ -57,8 +63,17 @@ extension AddiFeectivedViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        print(postsHolder.count)
+        
         guard let cello = addiFeectTableView.dequeueReusableCell(withIdentifier: "cello", for: indexPath) as? AddiFeectivedCello else { print("addifeec cello ain't exist")
             return UITableViewCell.init() }
+        
+        let thisSpecificPost = postsHolder[indexPath.row]
+        let imageryURL = thisSpecificPost.picURL
+        let poster = thisSpecificPost.poster
+    
+        cello.addiFeectivedImagery.imageryPull( picURL: imageryURL)
+        cello.addiFeectivedUserName.text = poster
  
         return cello
     }

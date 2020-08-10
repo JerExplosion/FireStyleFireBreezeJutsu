@@ -14,6 +14,7 @@
 		8F57B1C424DA478B0093BAA6 /* TxtFEffec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57B1C324DA478B0093BAA6 /* TxtFEffec.swift */; };
 		8F64093224DDE02300ACEEE1 /* XJProfileImageryPicka.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64093124DDE02300ACEEE1 /* XJProfileImageryPicka.swift */; };
 		8F7215B324E0640F00AB87F3 /* AddiFeectivedCello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7215B224E0640F00AB87F3 /* AddiFeectivedCello.swift */; };
+		8F7215B524E08B7400AB87F3 /* ImageryPull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7215B424E08B7400AB87F3 /* ImageryPull.swift */; };
 		8F7F21F924D21567003113CF /* XJViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7F21F824D21567003113CF /* XJViewController.swift */; };
 		8F9D14AC24DE2CB90019E548 /* FreshedKaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D14AB24DE2CB90019E548 /* FreshedKaoViewController.swift */; };
 		8FAD650E24D28B94008A4A28 /* InFoCello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD650D24D28B94008A4A28 /* InFoCello.swift */; };
@@ -47,6 +48,7 @@
 		8F57B1C324DA478B0093BAA6 /* TxtFEffec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxtFEffec.swift; sourceTree = "<group>"; };
 		8F64093124DDE02300ACEEE1 /* XJProfileImageryPicka.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XJProfileImageryPicka.swift; sourceTree = "<group>"; };
 		8F7215B224E0640F00AB87F3 /* AddiFeectivedCello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddiFeectivedCello.swift; sourceTree = "<group>"; };
+		8F7215B424E08B7400AB87F3 /* ImageryPull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageryPull.swift; sourceTree = "<group>"; };
 		8F7F21F824D21567003113CF /* XJViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XJViewController.swift; sourceTree = "<group>"; };
 		8F9D14AB24DE2CB90019E548 /* FreshedKaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshedKaoViewController.swift; sourceTree = "<group>"; };
 		8FAD650D24D28B94008A4A28 /* InFoCello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InFoCello.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				8FD5CA7C24D7CB39002E8176 /* NSUser.swift */,
 				8FDEDEE724DFA531005CEEBD /* NSPost.swift */,
+				8F7215B424E08B7400AB87F3 /* ImageryPull.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				8FD5CA8024D7CF61002E8176 /* CurrentFriendzTable.swift in Sources */,
 				8FD47FBB24D0796200235FFE /* SignaUppViewController.swift in Sources */,
 				8F4DE6F324DF444D00C31D80 /* ImagerySharingViewController.swift in Sources */,
+				8F7215B524E08B7400AB87F3 /* ImageryPull.swift in Sources */,
 				8FC0C09024D63D510039F5A6 /* TomodaNakaViewController.swift in Sources */,
 				8F57B1C424DA478B0093BAA6 /* TxtFEffec.swift in Sources */,
 				8FAD650E24D28B94008A4A28 /* InFoCello.swift in Sources */,
