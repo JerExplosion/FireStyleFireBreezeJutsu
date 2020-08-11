@@ -6,12 +6,13 @@
 //  Copyright © 2020 Jerry Ren. All rights reserved.
 //
 
+import ViewAnimator
 import UIKit
 
 import FirebaseDatabase
 import FirebaseAuth
 
-class AddiFeectivedViewController: UIViewController {
+class AddiFeectivedViewController: VelocityAnimaViewController {
 
     var postsHolder = [NSPost]()
 
@@ -24,7 +25,7 @@ class AddiFeectivedViewController: UIViewController {
         
         freeLoader()
     }
-    
+
     func freeLoader() {
         
         let freeLoaderRef = Database.database().reference()
@@ -63,11 +64,25 @@ extension AddiFeectivedViewController {
         
 extension AddiFeectivedViewController: UITableViewDataSource, UITableViewDelegate {
     
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) { // willDisplay
+//
+//        let fromAnimation = AnimationType.from(direction: .right, offset: 30.0)
+//        let zoomAnimation = AnimationType.zoom(scale: 0.2)
+//        let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/6)
+//        UIView.animate(views: tableView.visibleCells,
+//                       animations: [zoomAnimation],
+//                       duration: 5)
+////        UIView.animate(views: tableView.visibleCells,
+////                       animations: [fromAnimation, zoomAnimation],
+////                       delay: 3)
+//    }
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         print(postsHolder.count)
-        
-        guard let cello = addiFeectTableView.dequeueReusableCell(withIdentifier: "cello", for: indexPath) as? AddiFeectivedCello else { print("addifeec cello ain't exist")
+        // use tableView instad of myTable
+        guard let cello = tableView.dequeueReusableCell(withIdentifier: "cello", for: indexPath) as? AddiFeectivedCello else { print("addifeec cello ain't exist")
             return UITableViewCell.init() }
         
         let thisSpecificPost = postsHolder[indexPath.row]
@@ -76,18 +91,22 @@ extension AddiFeectivedViewController: UITableViewDataSource, UITableViewDelegat
         
         let imageryURLString = thisSpecificPost.picURL
         let imageryURL = URL(string: imageryURLString)
+        let imageryURLRequest = URLRequest(url: imageryURL!)
         
         
-        // MARS: - supposed to work but dissapointing
+        // MARS:
+        
         ImageryCache.shared.fetchImigi(url: imageryURL!, callBack: {
             (image) in
-            cello.addiFeectivedProfilePicture.image = image
+            cello.addiFeectivedImagery.image = image
             print("image cache called")
         })
+        // newer cache technique to improve peed of fetching
+        
         // MARS: -
         
-        
-        cello.addiFeectivedImagery.imageryPull( picURL: imageryURLString)
+  
+ //       cello.addiFeectivedImagery.imageryPull( picURL: imageryURLString)
         // (older way - works but performance not maximized)
            
         cello.addiFeectivedUserName.text = poster
@@ -95,6 +114,7 @@ extension AddiFeectivedViewController: UITableViewDataSource, UITableViewDelegat
         let pikachuGIF = UIImage.gifImageWithName("SurprisedPikachu")
         cello.addiFeectivedProfilePicture.image = pikachuGIF
         
+
         return cello
     }
     

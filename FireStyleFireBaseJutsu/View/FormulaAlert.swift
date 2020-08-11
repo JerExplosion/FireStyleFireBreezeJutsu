@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     
-    func alertFormula(title: String?, message: String?, action: String?) {
+    func formulaAlert(title: String?, message: String?, action: String?) {
         let alertCon = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let dismissAction = UIAlertAction(title: action, style: .cancel, handler: nil)
         alertCon.addAction(dismissAction)

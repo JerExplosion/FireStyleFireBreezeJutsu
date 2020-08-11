@@ -41,8 +41,6 @@ class ImageryCache {
                 
                 guard let httpURLResponse = response as? HTTPURLResponse,
                     httpURLResponse.statusCode == 200,
-                    let mimeType = response?.mimeType,
-                    mimeType.hasPrefix("image"),
                     let data = data,
                     erro == nil,
                     let img = UIImage(data: data)

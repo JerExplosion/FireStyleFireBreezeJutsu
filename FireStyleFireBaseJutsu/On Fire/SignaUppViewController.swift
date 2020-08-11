@@ -79,10 +79,10 @@ class SignaUppViewController: UIViewController {
                 var validPasswordOrNaw = true
                 
                 if uEm.isEmpty {
-                    self.alertFormula(title: nil, message: "Enter an email address buddy", action: "Try again")
+                    self.formulaAlert(title: nil, message: "Enter an email address buddy", action: "Try again")
                 }
                 else if (uEm.isValidEmailOrNaw == false) {
-                    self.alertFormula(title: nil, message: "Enter a valid email address buddy", action: "Try again")
+                    self.formulaAlert(title: nil, message: "Enter a valid email address buddy", action: "Try again")
                 }
                 else if pCode.count < 6 {
                     self.mustBeLongerThanSixCharsAlert()

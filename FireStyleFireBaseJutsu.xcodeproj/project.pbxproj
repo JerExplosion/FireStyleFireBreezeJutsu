@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F21E01524E2FBA500BF0B08 /* VelocityAnimaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F21E01424E2FBA500BF0B08 /* VelocityAnimaViewController.swift */; };
 		8F42E65E24D0D37D0078F26A /* DataCoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F42E65D24D0D37D0078F26A /* DataCoreViewModel.swift */; };
 		8F4DE6F324DF444D00C31D80 /* ImagerySharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4DE6F224DF444D00C31D80 /* ImagerySharingViewController.swift */; };
 		8F4DE6F524DF495200C31D80 /* ImagerySharingPickaExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4DE6F424DF495200C31D80 /* ImagerySharingPickaExtension.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		08CEB9B26963B7F822FA6FC9 /* Pods-FireStyleFireBaseJutsu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireStyleFireBaseJutsu.debug.xcconfig"; path = "Target Support Files/Pods-FireStyleFireBaseJutsu/Pods-FireStyleFireBaseJutsu.debug.xcconfig"; sourceTree = "<group>"; };
+		8F21E01424E2FBA500BF0B08 /* VelocityAnimaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VelocityAnimaViewController.swift; sourceTree = "<group>"; };
 		8F42E65D24D0D37D0078F26A /* DataCoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoreViewModel.swift; sourceTree = "<group>"; };
 		8F4DE6F224DF444D00C31D80 /* ImagerySharingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagerySharingViewController.swift; sourceTree = "<group>"; };
 		8F4DE6F424DF495200C31D80 /* ImagerySharingPickaExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagerySharingPickaExtension.swift; sourceTree = "<group>"; };
@@ -178,8 +180,8 @@
 		8FD47FBE24D0B51800235FFE /* On Fire */ = {
 			isa = PBXGroup;
 			children = (
-				8FD47FBA24D0796200235FFE /* SignaUppViewController.swift */,
 				8FDEDEE524DF9C22005CEEBD /* AddiFeectivedViewController.swift */,
+				8FD47FBA24D0796200235FFE /* SignaUppViewController.swift */,
 				8F6F884324E1A8D600410923 /* FirebaseManager.swift */,
 				8F9D14AB24DE2CB90019E548 /* FreshedKaoViewController.swift */,
 				8FD47FBC24D095AA00235FFE /* SigmaInnViewController.swift */,
@@ -190,6 +192,7 @@
 				8F7F21F824D21567003113CF /* XJViewController.swift */,
 				8F4DE6F224DF444D00C31D80 /* ImagerySharingViewController.swift */,
 				8F4DE6F424DF495200C31D80 /* ImagerySharingPickaExtension.swift */,
+				8F21E01424E2FBA500BF0B08 /* VelocityAnimaViewController.swift */,
 				8FD5CA7E24D7CCFC002E8176 /* Model */,
 			);
 			path = "On Fire";
@@ -390,6 +393,7 @@
 				8F57B1C424DA478B0093BAA6 /* TxtFEffec.swift in Sources */,
 				8FAD650E24D28B94008A4A28 /* InFoCello.swift in Sources */,
 				8F7215B324E0640F00AB87F3 /* AddiFeectivedCello.swift in Sources */,
+				8F21E01524E2FBA500BF0B08 /* VelocityAnimaViewController.swift in Sources */,
 				8F7F21F924D21567003113CF /* XJViewController.swift in Sources */,
 				8F6F884224E199E400410923 /* FormulaAlert.swift in Sources */,
 				8F42E65E24D0D37D0078F26A /* DataCoreViewModel.swift in Sources */,

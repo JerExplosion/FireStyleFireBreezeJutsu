@@ -57,7 +57,7 @@ class XJViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func userNameEntryReturn(_ sender: UIButton) {
-        alertFormula(title: "Username Set!", message: nil, action: "Start Exploring")
+        formulaAlert(title: "Username Set!", message: nil, action: "Start Exploring")
         kaedeUsernameTextfield.resignFirstResponder()
     }
     
