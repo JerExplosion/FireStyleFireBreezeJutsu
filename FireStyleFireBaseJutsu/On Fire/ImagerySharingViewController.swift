@@ -11,7 +11,7 @@ import FirebaseAuth
 import UIKit
 import FirebaseDatabase
 
-class ImagerySharingViewController: UIViewController, UITextViewDelegate {
+class ImagerySharingViewController: VelocityAnimaViewController, UITextViewDelegate {
 
     @IBOutlet weak var shareableImagery: UIImageView!
     @IBOutlet weak var shareUpButton: UIButton!

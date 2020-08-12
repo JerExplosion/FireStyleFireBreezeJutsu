@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InFoViewController: UIViewController {
+class InFoViewController: VelocityAnimaViewController {
     
     @IBOutlet weak var inFoTableView: UITableView!
     

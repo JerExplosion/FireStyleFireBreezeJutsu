@@ -12,18 +12,23 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class AddiFeectivedViewController: VelocityAnimaViewController {
+class AddiFeectivedViewController: UIViewController {
 
     var postsHolder = [NSPost]()
+    
+    var approved = false
 
     @IBOutlet weak var addiFeectTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
+    //    rotator(animaDelay: 0.5)
+  
         addiFeectTableView.delegate = self
         addiFeectTableView.dataSource = self
         
         freeLoader()
+
     }
 
     func freeLoader() {
@@ -46,13 +51,18 @@ class AddiFeectivedViewController: VelocityAnimaViewController {
         }
         freeLoaderRef.removeAllObservers()
     }
+    
+//    @IBAction func hittingApproval(_ sender: UIButton) {
+//        print("aPPROVAL BUTTON hit")
+//    }
+    
 }
 
 extension AddiFeectivedViewController {
     
     func fetchPosts() {
         
-        FirebaseManager.shared.fetchPosts(childID: "PostsShared", compHandle: { (dataSnap) in
+        FirebaseManager.shared.fetchPosts(childID: "", child: "PostsShared", compHandle: { (dataSnap) in
             guard let snapDictio = dataSnap.value as? [String : Any] else { return }
             guard let picURL = snapDictio["picURL"] as? String else { return }
             guard let caption = snapDictio["caption"] as? String else { return }
@@ -80,10 +90,10 @@ extension AddiFeectivedViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        print(postsHolder.count)
-        // use tableView instad of myTable
         guard let cello = tableView.dequeueReusableCell(withIdentifier: "cello", for: indexPath) as? AddiFeectivedCello else { print("addifeec cello ain't exist")
             return UITableViewCell.init() }
+        
+        cello.approvalDelegate = self
         
         let thisSpecificPost = postsHolder[indexPath.row]
         let poster = thisSpecificPost.poster
@@ -93,19 +103,16 @@ extension AddiFeectivedViewController: UITableViewDataSource, UITableViewDelegat
         let imageryURL = URL(string: imageryURLString)
         let imageryURLRequest = URLRequest(url: imageryURL!)
         
-        
         // MARS:
         
         ImageryCache.shared.fetchImigi(url: imageryURL!, callBack: {
             (image) in
             cello.addiFeectivedImagery.image = image
-            print("image cache called")
         })
         // newer cache technique to improve peed of fetching
         
         // MARS: -
         
-  
  //       cello.addiFeectivedImagery.imageryPull( picURL: imageryURLString)
         // (older way - works but performance not maximized)
            
@@ -114,12 +121,11 @@ extension AddiFeectivedViewController: UITableViewDataSource, UITableViewDelegat
         let pikachuGIF = UIImage.gifImageWithName("SurprisedPikachu")
         cello.addiFeectivedProfilePicture.image = pikachuGIF
         
-
         return cello
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 500
+            return  530
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -127,7 +133,18 @@ extension AddiFeectivedViewController: UITableViewDataSource, UITableViewDelegat
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    //    print("postHolder.count = ", postsHolder.count)
         return postsHolder.count
+    }
+}
+
+extension AddiFeectivedViewController: ApprovalDelegate {
+     
+    func externalValidation(afCell: AddiFeectivedCello) {
+        
+        guard var btoImgString = ( (approved == true) ? "like-aka" : "like-ios" )
+            else { return }
+        let btoImg = UIImage(named: btoImgString)
+        afCell.approvalButton.setImage(btoImg, for: .normal)
+        approved = !approved
     }
 }

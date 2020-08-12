@@ -11,7 +11,7 @@ import UIKit
 import GoogleSignIn
 import FirebaseDatabase
 
-class ViewController: UIViewController {
+class ViewController: VelocityAnimaViewController {
     
     var ref: DatabaseReference!
     

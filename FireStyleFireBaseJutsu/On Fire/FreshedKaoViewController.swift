@@ -10,16 +10,20 @@ import UIKit
 import Foundation
 import FirebaseDatabase
 import FirebaseAuth
+  
+  //  assertNotNil( FirebaseManager.shared)
 
-class FreshedKaoViewController: UIViewController {
+class FreshedKaoViewController: VelocityAnimaViewController {
     
     @IBOutlet weak var pokeFiTextLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
-        animatePokeFi()
-
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.77) {
+            self.animatePokeFi()
+        }
     }
     
     func refExperimentation() {

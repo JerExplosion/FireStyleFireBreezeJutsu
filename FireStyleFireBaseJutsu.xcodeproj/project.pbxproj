@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8F21E01524E2FBA500BF0B08 /* VelocityAnimaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F21E01424E2FBA500BF0B08 /* VelocityAnimaViewController.swift */; };
+		8F2F649024E46C8D0024C6A9 /* FireBreezeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F648F24E46C8D0024C6A9 /* FireBreezeTest.swift */; };
 		8F42E65E24D0D37D0078F26A /* DataCoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F42E65D24D0D37D0078F26A /* DataCoreViewModel.swift */; };
 		8F4DE6F324DF444D00C31D80 /* ImagerySharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4DE6F224DF444D00C31D80 /* ImagerySharingViewController.swift */; };
 		8F4DE6F524DF495200C31D80 /* ImagerySharingPickaExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4DE6F424DF495200C31D80 /* ImagerySharingPickaExtension.swift */; };
@@ -47,9 +48,22 @@
 		A6AA9E5D5CEEE7D3BC5C1AD0 /* Pods_FireStyleFireBaseJutsu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971B37DD6576146E18A8DC09 /* Pods_FireStyleFireBaseJutsu.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8F2F649224E46C8D0024C6A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FBD64E024CF661500075A4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FBD64E724CF661500075A4F;
+			remoteInfo = FireStyleFireBaseJutsu;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		08CEB9B26963B7F822FA6FC9 /* Pods-FireStyleFireBaseJutsu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireStyleFireBaseJutsu.debug.xcconfig"; path = "Target Support Files/Pods-FireStyleFireBaseJutsu/Pods-FireStyleFireBaseJutsu.debug.xcconfig"; sourceTree = "<group>"; };
 		8F21E01424E2FBA500BF0B08 /* VelocityAnimaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VelocityAnimaViewController.swift; sourceTree = "<group>"; };
+		8F2F648D24E46C8D0024C6A9 /* FireBreezeTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireBreezeTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F2F648F24E46C8D0024C6A9 /* FireBreezeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreezeTest.swift; sourceTree = "<group>"; };
+		8F2F649124E46C8D0024C6A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F42E65D24D0D37D0078F26A /* DataCoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoreViewModel.swift; sourceTree = "<group>"; };
 		8F4DE6F224DF444D00C31D80 /* ImagerySharingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagerySharingViewController.swift; sourceTree = "<group>"; };
 		8F4DE6F424DF495200C31D80 /* ImagerySharingPickaExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagerySharingPickaExtension.swift; sourceTree = "<group>"; };
@@ -93,6 +107,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8F2F648A24E46C8D0024C6A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FBD64E524CF661500075A4F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,6 +125,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F2F648E24E46C8D0024C6A9 /* FireBreezeTest */ = {
+			isa = PBXGroup;
+			children = (
+				8F2F648F24E46C8D0024C6A9 /* FireBreezeTest.swift */,
+				8F2F649124E46C8D0024C6A9 /* Info.plist */,
+			);
+			path = FireBreezeTest;
+			sourceTree = "<group>";
+		};
 		8F42E65F24D1247F0078F26A /* DataCoreViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				8FBD64EA24CF661500075A4F /* FireStyleFireBaseJutsu */,
+				8F2F648E24E46C8D0024C6A9 /* FireBreezeTest */,
 				8FBD64E924CF661500075A4F /* Products */,
 				ACD0239B9490BA49FAC214D1 /* Pods */,
 				BD3FD39AC65ED7E3557B8EC5 /* Frameworks */,
@@ -154,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				8FBD64E824CF661500075A4F /* FireStyleFireBaseJutsu.app */,
+				8F2F648D24E46C8D0024C6A9 /* FireBreezeTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,7 +214,6 @@
 			children = (
 				8FDEDEE524DF9C22005CEEBD /* AddiFeectivedViewController.swift */,
 				8FD47FBA24D0796200235FFE /* SignaUppViewController.swift */,
-				8F6F884324E1A8D600410923 /* FirebaseManager.swift */,
 				8F9D14AB24DE2CB90019E548 /* FreshedKaoViewController.swift */,
 				8FD47FBC24D095AA00235FFE /* SigmaInnViewController.swift */,
 				8FC0C08F24D63D510039F5A6 /* TomodaNakaViewController.swift */,
@@ -193,18 +224,19 @@
 				8F4DE6F224DF444D00C31D80 /* ImagerySharingViewController.swift */,
 				8F4DE6F424DF495200C31D80 /* ImagerySharingPickaExtension.swift */,
 				8F21E01424E2FBA500BF0B08 /* VelocityAnimaViewController.swift */,
-				8FD5CA7E24D7CCFC002E8176 /* Model */,
+				8FD5CA7E24D7CCFC002E8176 /* Fire Model */,
 			);
 			path = "On Fire";
 			sourceTree = "<group>";
 		};
-		8FD5CA7E24D7CCFC002E8176 /* Model */ = {
+		8FD5CA7E24D7CCFC002E8176 /* Fire Model */ = {
 			isa = PBXGroup;
 			children = (
+				8F6F884324E1A8D600410923 /* FirebaseManager.swift */,
 				8FD5CA7C24D7CB39002E8176 /* NSUser.swift */,
 				8FDEDEE724DFA531005CEEBD /* NSPost.swift */,
 			);
-			path = Model;
+			path = "Fire Model";
 			sourceTree = "<group>";
 		};
 		ACD0239B9490BA49FAC214D1 /* Pods */ = {
@@ -227,6 +259,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8F2F648C24E46C8D0024C6A9 /* FireBreezeTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F2F649624E46C8D0024C6A9 /* Build configuration list for PBXNativeTarget "FireBreezeTest" */;
+			buildPhases = (
+				8F2F648924E46C8D0024C6A9 /* Sources */,
+				8F2F648A24E46C8D0024C6A9 /* Frameworks */,
+				8F2F648B24E46C8D0024C6A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F2F649324E46C8D0024C6A9 /* PBXTargetDependency */,
+			);
+			name = FireBreezeTest;
+			productName = FireBreezeTest;
+			productReference = 8F2F648D24E46C8D0024C6A9 /* FireBreezeTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8FBD64E724CF661500075A4F /* FireStyleFireBaseJutsu */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FBD64FC24CF661900075A4F /* Build configuration list for PBXNativeTarget "FireStyleFireBaseJutsu" */;
@@ -258,6 +308,10 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Jerry Ren";
 				TargetAttributes = {
+					8F2F648C24E46C8D0024C6A9 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 8FBD64E724CF661500075A4F;
+					};
 					8FBD64E724CF661500075A4F = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
@@ -277,11 +331,19 @@
 			projectRoot = "";
 			targets = (
 				8FBD64E724CF661500075A4F /* FireStyleFireBaseJutsu */,
+				8F2F648C24E46C8D0024C6A9 /* FireBreezeTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8F2F648B24E46C8D0024C6A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FBD64E624CF661500075A4F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -373,6 +435,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8F2F648924E46C8D0024C6A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F2F649024E46C8D0024C6A9 /* FireBreezeTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FBD64E424CF661500075A4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,6 +484,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8F2F649324E46C8D0024C6A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FBD64E724CF661500075A4F /* FireStyleFireBaseJutsu */;
+			targetProxy = 8F2F649224E46C8D0024C6A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		8FBD64F124CF661600075A4F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -434,6 +512,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8F2F649424E46C8D0024C6A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AAPS2WKL6R;
+				INFOPLIST_FILE = FireBreezeTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JerExplosion.FireBreezeTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FireStyleFireBaseJutsu.app/FireStyleFireBaseJutsu";
+			};
+			name = Debug;
+		};
+		8F2F649524E46C8D0024C6A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AAPS2WKL6R;
+				INFOPLIST_FILE = FireBreezeTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JerExplosion.FireBreezeTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FireStyleFireBaseJutsu.app/FireStyleFireBaseJutsu";
+			};
+			name = Release;
+		};
 		8FBD64FA24CF661900075A4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -589,6 +707,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8F2F649624E46C8D0024C6A9 /* Build configuration list for PBXNativeTarget "FireBreezeTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F2F649424E46C8D0024C6A9 /* Debug */,
+				8F2F649524E46C8D0024C6A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8FBD64E324CF661500075A4F /* Build configuration list for PBXProject "FireStyleFireBaseJutsu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -14,7 +14,7 @@ import FirebaseDatabase
 import FirebaseAuth
 import Firebase
 
-class XJViewController: UIViewController, UITextFieldDelegate {
+class XJViewController: VelocityAnimaViewController, UITextFieldDelegate {
     
     let signedInUserUID = Auth.auth().currentUser?.uid
       
@@ -57,6 +57,7 @@ class XJViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func userNameEntryReturn(_ sender: UIButton) {
+        kaedeUsernameTextfield.text = nil
         formulaAlert(title: "Username Set!", message: nil, action: "Start Exploring")
         kaedeUsernameTextfield.resignFirstResponder()
     }

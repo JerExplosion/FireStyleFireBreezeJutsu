@@ -12,10 +12,10 @@ target 'FireStyleFireBaseJutsu' do
     pod 'Firebase/Database'
     pod 'Firebase/Storage'
 
-  #  pod 'Firebase/Crashlytics'
-  #  pod 'Firebase/Analytics'
-
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
+
+ #   pod 'Nimble'
+ #   pod 'Quick'
 
 end

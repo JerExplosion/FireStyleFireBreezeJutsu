@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class TomodaNakaViewController: UIViewController {
+class TomodaNakaViewController: VelocityAnimaViewController {
     
     var usersCollection = TargetedFriend() // one layer for simplicity
     // switch to NSUser later

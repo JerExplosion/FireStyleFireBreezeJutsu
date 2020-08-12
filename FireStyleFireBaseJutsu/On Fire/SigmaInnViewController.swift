@@ -11,7 +11,7 @@ import Firebase
 import GoogleSignIn
 import UIKit
 
-class SigmaInnViewController: UIViewController {
+class SigmaInnViewController: VelocityAnimaViewController {
     
     @IBOutlet weak var pCodeTextField: UITextField!
     @IBOutlet weak var uEmTextField: UITextField!
@@ -57,6 +57,7 @@ class SigmaInnViewController: UIViewController {
             return
         }
         navigationController?.crossDissolve(destination)
+        print("switch to sign up called")
     }  
 }
 

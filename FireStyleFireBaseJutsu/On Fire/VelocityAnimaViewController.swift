@@ -10,19 +10,25 @@ import UIKit
 import ViewAnimator
 
 class VelocityAnimaViewController: UIViewController {
+    
+    let fromAnimation = AnimationType.from(direction: .left, offset: 33.33)
+    let zoomAnimation = AnimationType.zoom(scale: 0.222)
+      
+    var animaDelay = 0.3
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        rotator(animaDelay: 0.3)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        let fromAnimation = AnimationType.from(direction: .left, offset: 30.0)
-        let zoomAnimation = AnimationType.zoom(scale: 0.2)
-        let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/6)
+    override func viewWillAppear(_ animated: Bool) {   }
+    
+    func rotator(animaDelay: Double) {
+         let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/6)
 
-        UIView.animate(views: view.subviews,
-                       animations: [rotateAnimation],
-                       delay: 0.6)
+         UIView.animate(views: view.subviews,
+                        animations: [rotateAnimation],
+                        delay: animaDelay)
     }
+    
 }

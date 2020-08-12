@@ -19,12 +19,11 @@ class FirebaseManager {
     
     private init() { }
     
-    func fetchPosts(childID: String, compHandle: completionHandler) {
-        Database.database().reference().child("PostsShared").queryOrderedByKey().observeSingleEvent(of: .childAdded) { (dataSnap) in
-            
+    func fetchPosts(childID: String, child: String, compHandle: completionHandler) {
+        Database.database().reference().child(child).queryOrderedByKey().observeSingleEvent(of: .childAdded) { (dataSnap) in   //   "PostsShared"
             compHandle?(dataSnap)
         }
     }
     
 }
-
+         
