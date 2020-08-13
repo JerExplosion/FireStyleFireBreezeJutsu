@@ -19,6 +19,9 @@ class AddiFeectivedViewController: UIViewController {
     var approved = false
 
     @IBOutlet weak var addiFeectTableView: UITableView!
+    
+    @IBOutlet weak var horizontalCollectV: UICollectionView!
+         
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,8 +30,14 @@ class AddiFeectivedViewController: UIViewController {
         addiFeectTableView.delegate = self
         addiFeectTableView.dataSource = self
         
+        horizontalCollectV.delegate = self
+        horizontalCollectV.dataSource = self
+        
+        horizontalCollectV.layer.borderColor = UIColor.lightGray.cgColor
+        horizontalCollectV.layer.borderWidth = 0.5
+        
+        
         freeLoader()
-
     }
 
     func freeLoader() {

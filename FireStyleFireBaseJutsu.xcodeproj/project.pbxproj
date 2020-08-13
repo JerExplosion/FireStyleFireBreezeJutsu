@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8F21E01524E2FBA500BF0B08 /* VelocityAnimaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F21E01424E2FBA500BF0B08 /* VelocityAnimaViewController.swift */; };
 		8F2F649024E46C8D0024C6A9 /* FireBreezeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F648F24E46C8D0024C6A9 /* FireBreezeTest.swift */; };
+		8F2F64B824E4E53F0024C6A9 /* HorizontalCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F64B724E4E53F0024C6A9 /* HorizontalCollectionCell.swift */; };
+		8F2F64BA24E4E6850024C6A9 /* HorizontalCollectExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F64B924E4E6840024C6A9 /* HorizontalCollectExtend.swift */; };
 		8F42E65E24D0D37D0078F26A /* DataCoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F42E65D24D0D37D0078F26A /* DataCoreViewModel.swift */; };
 		8F4DE6F324DF444D00C31D80 /* ImagerySharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4DE6F224DF444D00C31D80 /* ImagerySharingViewController.swift */; };
 		8F4DE6F524DF495200C31D80 /* ImagerySharingPickaExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4DE6F424DF495200C31D80 /* ImagerySharingPickaExtension.swift */; };
@@ -64,6 +66,8 @@
 		8F2F648D24E46C8D0024C6A9 /* FireBreezeTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireBreezeTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2F648F24E46C8D0024C6A9 /* FireBreezeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreezeTest.swift; sourceTree = "<group>"; };
 		8F2F649124E46C8D0024C6A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F2F64B724E4E53F0024C6A9 /* HorizontalCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionCell.swift; sourceTree = "<group>"; };
+		8F2F64B924E4E6840024C6A9 /* HorizontalCollectExtend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectExtend.swift; sourceTree = "<group>"; };
 		8F42E65D24D0D37D0078F26A /* DataCoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoreViewModel.swift; sourceTree = "<group>"; };
 		8F4DE6F224DF444D00C31D80 /* ImagerySharingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagerySharingViewController.swift; sourceTree = "<group>"; };
 		8F4DE6F424DF495200C31D80 /* ImagerySharingPickaExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagerySharingPickaExtension.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				8FBD650524CF75FE00075A4F /* AppearanceDependencies.swift    .swift */,
+				8F2F64B924E4E6840024C6A9 /* HorizontalCollectExtend.swift */,
+				8F2F64B724E4E53F0024C6A9 /* HorizontalCollectionCell.swift */,
 				8F7215B224E0640F00AB87F3 /* AddiFeectivedCello.swift */,
 				8FAD650D24D28B94008A4A28 /* InFoCello.swift */,
 				8F67420924E132A30067E019 /* GoodOldCrossDissolve.swift */,
@@ -453,8 +459,10 @@
 				8F6F884624E1C03300410923 /* TxtViewPHolder.swift in Sources */,
 				8FD47FC524D0BEB100235FFE /* VirtualContacts.xcdatamodeld in Sources */,
 				8FD47FC224D0B7DD00235FFE /* PersistenceRelevant.swift in Sources */,
+				8F2F64BA24E4E6850024C6A9 /* HorizontalCollectExtend.swift in Sources */,
 				8FD5CA8024D7CF61002E8176 /* CurrentFriendzTable.swift in Sources */,
 				8FD47FBB24D0796200235FFE /* SignaUppViewController.swift in Sources */,
+				8F2F64B824E4E53F0024C6A9 /* HorizontalCollectionCell.swift in Sources */,
 				8F4DE6F324DF444D00C31D80 /* ImagerySharingViewController.swift in Sources */,
 				8F7215B524E08B7400AB87F3 /* ImageryPull.swift in Sources */,
 				8FC0C09024D63D510039F5A6 /* TomodaNakaViewController.swift in Sources */,
