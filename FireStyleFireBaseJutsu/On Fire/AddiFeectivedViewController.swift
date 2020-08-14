@@ -36,7 +36,6 @@ class AddiFeectivedViewController: UIViewController {
         horizontalCollectV.layer.borderColor = UIColor.lightGray.cgColor
         horizontalCollectV.layer.borderWidth = 0.5
         
-        
         freeLoader()
     }
 
@@ -51,7 +50,9 @@ class AddiFeectivedViewController: UIViewController {
             let poster = snapDictio["poster"] as? String ?? "Kingsley" // "Nintendo"
             let caption = snapDictio["caption"] as? String ?? "Placeholder Caption"
             
-            let individualPost = NSPost(picURL: picURL, poster: poster, caption: caption)
+            let likes = snapDictio["likes"]  as? Int ?? 36
+            
+            let individualPost = NSPost(picURL: picURL, poster: poster, caption: caption, likes: likes)
             self.postsHolder.append(individualPost)
             
             self.postsHolder.reverse() 
@@ -60,11 +61,6 @@ class AddiFeectivedViewController: UIViewController {
         }
         freeLoaderRef.removeAllObservers()
     }
-    
-//    @IBAction func hittingApproval(_ sender: UIButton) {
-//        print("aPPROVAL BUTTON hit")
-//    }
-    
 }
 
 extension AddiFeectivedViewController {
@@ -96,7 +92,6 @@ extension AddiFeectivedViewController: UITableViewDataSource, UITableViewDelegat
 ////                       delay: 3)
 //    }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         guard let cello = tableView.dequeueReusableCell(withIdentifier: "cello", for: indexPath) as? AddiFeectivedCello else { print("addifeec cello ain't exist")
@@ -118,7 +113,7 @@ extension AddiFeectivedViewController: UITableViewDataSource, UITableViewDelegat
             (image) in
             cello.addiFeectivedImagery.image = image
         })
-        // newer cache technique to improve peed of fetching
+        // newer cache technique to improve speed of fetching
         
         // MARS: -
         
