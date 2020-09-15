@@ -30,5 +30,4 @@ class VelocityAnimaViewController: UIViewController {
                         animations: [rotateAnimation],
                         delay: animaDelay)
     }
-    
 }

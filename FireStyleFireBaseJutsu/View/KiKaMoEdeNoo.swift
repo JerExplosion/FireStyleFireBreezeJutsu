@@ -47,7 +47,7 @@ import UIKit
     private let textFieldInsets = CGPoint(x: 10, y: 0)
 
     // MARS: - Effectsoo
-
+    
     override open func drawViewsForRect(_ rect: CGRect) {
         let frame = CGRect(origin: .zero, size: CGSize(width: rect.size.width, height: rect.size.height))
 
@@ -132,6 +132,5 @@ import UIKit
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
         return editingRect(forBounds: bounds)
     }
-
 }
 

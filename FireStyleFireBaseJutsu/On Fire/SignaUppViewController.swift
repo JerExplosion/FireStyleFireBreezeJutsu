@@ -32,10 +32,8 @@ class SignaUppViewController: VelocityAnimaViewController {
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
         
-        
         googoroSignIn()
     }
-    
     
     func googoroSignIn() {
         
