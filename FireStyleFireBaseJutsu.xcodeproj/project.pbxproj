@@ -47,6 +47,7 @@
 		8FD5CA8024D7CF61002E8176 /* CurrentFriendzTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD5CA7F24D7CF61002E8176 /* CurrentFriendzTable.swift */; };
 		8FDEDEE624DF9C22005CEEBD /* AddiFeectivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDEDEE524DF9C22005CEEBD /* AddiFeectivedViewController.swift */; };
 		8FDEDEE824DFA531005CEEBD /* NSPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDEDEE724DFA531005CEEBD /* NSPost.swift */; };
+		8FF86F5B25144ADB00AF8133 /* IsValidEmailOrNaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF86F5A25144ADB00AF8133 /* IsValidEmailOrNaw.swift */; };
 		A6AA9E5D5CEEE7D3BC5C1AD0 /* Pods_FireStyleFireBaseJutsu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971B37DD6576146E18A8DC09 /* Pods_FireStyleFireBaseJutsu.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		8FD5CA7F24D7CF61002E8176 /* CurrentFriendzTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentFriendzTable.swift; sourceTree = "<group>"; };
 		8FDEDEE524DF9C22005CEEBD /* AddiFeectivedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddiFeectivedViewController.swift; sourceTree = "<group>"; };
 		8FDEDEE724DFA531005CEEBD /* NSPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPost.swift; sourceTree = "<group>"; };
+		8FF86F5A25144ADB00AF8133 /* IsValidEmailOrNaw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsValidEmailOrNaw.swift; sourceTree = "<group>"; };
 		971B37DD6576146E18A8DC09 /* Pods_FireStyleFireBaseJutsu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireStyleFireBaseJutsu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF1735016E541580C50A3EA6 /* Pods-FireStyleFireBaseJutsu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireStyleFireBaseJutsu.release.xcconfig"; path = "Target Support Files/Pods-FireStyleFireBaseJutsu/Pods-FireStyleFireBaseJutsu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -241,6 +243,7 @@
 				8F6F884324E1A8D600410923 /* FirebaseManager.swift */,
 				8FD5CA7C24D7CB39002E8176 /* NSUser.swift */,
 				8FDEDEE724DFA531005CEEBD /* NSPost.swift */,
+				8FF86F5A25144ADB00AF8133 /* IsValidEmailOrNaw.swift */,
 			);
 			path = "Fire Model";
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				8F64093224DDE02300ACEEE1 /* XJProfileImageryPicka.swift in Sources */,
 				8FBD64F024CF661600075A4F /* ViewController.swift in Sources */,
 				8F9D14AC24DE2CB90019E548 /* FreshedKaoViewController.swift in Sources */,
+				8FF86F5B25144ADB00AF8133 /* IsValidEmailOrNaw.swift in Sources */,
 				8FD5CA7D24D7CB39002E8176 /* NSUser.swift in Sources */,
 				8FBD64EC24CF661500075A4F /* AppDelegate.swift in Sources */,
 				8F57B1B824D9ADBB0093BAA6 /* KiKaMoEdeNoo.swift in Sources */,
