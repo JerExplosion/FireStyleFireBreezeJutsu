@@ -77,7 +77,7 @@ extension AddiFeectivedViewController {
     } // decent start of refactorization but fetchPosts ain't used anywhere yet
 }
         
-extension AddiFeectivedViewController: UITableViewDataSource, UITableViewDelegate {
+extension AddiFeectivedViewController: TableDatasourceDelegateCombination {
     
 //    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) { // willDisplay
 //

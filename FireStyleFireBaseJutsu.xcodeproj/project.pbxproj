@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F1BE2FD251ABF39007F0A9C /* GloballyApplied.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1BE2FC251ABF39007F0A9C /* GloballyApplied.swift */; };
 		8F21E01524E2FBA500BF0B08 /* VelocityAnimaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F21E01424E2FBA500BF0B08 /* VelocityAnimaViewController.swift */; };
 		8F2F649024E46C8D0024C6A9 /* FireBreezeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F648F24E46C8D0024C6A9 /* FireBreezeTest.swift */; };
 		8F2F64B824E4E53F0024C6A9 /* HorizontalCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F64B724E4E53F0024C6A9 /* HorizontalCollectionCell.swift */; };
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		08CEB9B26963B7F822FA6FC9 /* Pods-FireStyleFireBaseJutsu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireStyleFireBaseJutsu.debug.xcconfig"; path = "Target Support Files/Pods-FireStyleFireBaseJutsu/Pods-FireStyleFireBaseJutsu.debug.xcconfig"; sourceTree = "<group>"; };
+		8F1BE2FC251ABF39007F0A9C /* GloballyApplied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloballyApplied.swift; sourceTree = "<group>"; };
 		8F21E01424E2FBA500BF0B08 /* VelocityAnimaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VelocityAnimaViewController.swift; sourceTree = "<group>"; };
 		8F2F648D24E46C8D0024C6A9 /* FireBreezeTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireBreezeTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2F648F24E46C8D0024C6A9 /* FireBreezeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreezeTest.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				8FD5CA7C24D7CB39002E8176 /* NSUser.swift */,
 				8FDEDEE724DFA531005CEEBD /* NSPost.swift */,
 				8FF86F5A25144ADB00AF8133 /* IsValidEmailOrNaw.swift */,
+				8F1BE2FC251ABF39007F0A9C /* GloballyApplied.swift */,
 			);
 			path = "Fire Model";
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				8F67420E24E136E20067E019 /* HandlingGIF.swift in Sources */,
 				8F57B1C424DA478B0093BAA6 /* TxtFEffec.swift in Sources */,
 				8FAD650E24D28B94008A4A28 /* InFoCello.swift in Sources */,
+				8F1BE2FD251ABF39007F0A9C /* GloballyApplied.swift in Sources */,
 				8F7215B324E0640F00AB87F3 /* AddiFeectivedCello.swift in Sources */,
 				8F21E01524E2FBA500BF0B08 /* VelocityAnimaViewController.swift in Sources */,
 				8F7F21F924D21567003113CF /* XJViewController.swift in Sources */,

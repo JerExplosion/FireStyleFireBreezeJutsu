@@ -13,7 +13,7 @@ extension AddiFeectivedViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let celloc  = horizontalCollectV.dequeueReusableCell(withReuseIdentifier: "onitcelloc", for: indexPath) as! HorizontalCollectionCell
+        let celloc  = horizontalCollectV.dequeueReusableCell(withReuseIdentifier: GloballyApplied.horizontalCollectID, for: indexPath) as! HorizontalCollectionCell
         
         if indexPath.row == 0 {
             celloc.horizontalCollectImageView.image = nil

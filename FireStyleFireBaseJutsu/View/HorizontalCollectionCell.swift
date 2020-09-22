@@ -9,6 +9,5 @@
 import UIKit
 
 class HorizontalCollectionCell: UICollectionViewCell {
-    
     @IBOutlet weak var horizontalCollectImageView: UIImageView!
 }
