@@ -10,8 +10,10 @@ import Foundation
 import UIKit
 
 typealias TableDatasourceDelegateCombination = UITableViewDelegate & UITableViewDataSource
+typealias CollecDelegateDatasourceCombination = UICollectionViewDataSource & UICollectionViewDelegate
 
 struct GloballyApplied {
     static let whyWasntThisCreatedFromTheGetGo = "whyWasntThisCreatedFromTheGetGo"
     static let horizontalCollectID = "onitcelloc"
 }
+

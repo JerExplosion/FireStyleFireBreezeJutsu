@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-extension AddiFeectivedViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension AddiFeectivedViewController: CollecDelegateDatasourceCombination, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
