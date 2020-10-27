@@ -8,7 +8,7 @@
 
 import UIKit
 // import Firebase
-import GoogleSignIn
+// import GoogleSignIn
 import FirebaseDatabase
 
 class ViewController: VelocityAnimaViewController {
@@ -22,8 +22,8 @@ class ViewController: VelocityAnimaViewController {
         
         // MARS: - Above database code
         
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+ //       GIDSignIn.sharedInstance()?.presentingViewController = self
+  //      GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         
         // MARK: - seting key value pairs for database
         

@@ -11,7 +11,7 @@ import ViewAnimator
 
 class VelocityAnimaViewController: UIViewController {
     
-    let fromAnimation = AnimationType.from(direction: .left, offset: 33.33)
+ //   let fromAnimation = AnimationType.from(direction: .left, offset: 33.33)
     let zoomAnimation = AnimationType.zoom(scale: 0.222)
       
     var animaDelay = 0.3

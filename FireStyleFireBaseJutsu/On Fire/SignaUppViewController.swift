@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-import GoogleSignIn
+// import GoogleSignIn
 import FirebaseDatabase
 
 class SignaUppViewController: VelocityAnimaViewController {
@@ -30,35 +30,35 @@ class SignaUppViewController: VelocityAnimaViewController {
         let pikachuGIF = UIImage.gifImageWithName("SurprisedPikachu")
         self.imgView.image = pikachuGIF
         
-        GIDSignIn.sharedInstance()?.presentingViewController = self
+    //    GIDSignIn.sharedInstance()?.presentingViewController = self
         
-        googoroSignIn()
+ //       googoroSignIn()
     }
     
-    func googoroSignIn() {
-        
-        // The next line automatically signs in the user.
-        // GIDSignIn.sharedInstance()?.restorePreviousSignIn()
-        
-         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "signin"), object: nil, queue: .main) { (notif) in
-             let userInfo = notif.userInfo
-             let user = userInfo!["user"] as! GIDGoogleUser
-             
-             DispatchQueue.global().async {
-                 let imageURL = user.profile.imageURL(withDimension: 150)
-      
-                 let data = try! Data.init(contentsOf: imageURL!)
-                 let image = UIImage(data: data)
-                 DispatchQueue.main.async {
-                // magical google account profile image link-up
-                     self.imgView.image = image
-                     self.sendToTabTab()
-                    print("googoroSignin( ) successfully sending toTabTab")
-                 }
-             }
-             
-         }
-    }
+//    func googoroSignIn() {
+//
+//        // The next line automatically signs in the user.
+//        // GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+//
+//         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "signin"), object: nil, queue: .main) { (notif) in
+//             let userInfo = notif.userInfo
+//    //         let user = userInfo!["user"] as! GIDGoogleUser
+//
+//             DispatchQueue.global().async {
+//      //           let imageURL = user.profile.imageURL(withDimension: 150)
+//
+//                 let data = try! Data.init(contentsOf: imageURL!)
+//                 let image = UIImage(data: data)
+//                 DispatchQueue.main.async {
+//                // magical google account profile image link-up
+//                     self.imgView.image = image
+//                     self.sendToTabTab()
+//                    print("googoroSignin( ) successfully sending toTabTab")
+//                 }
+//             }
+//
+//         }
+//    }
         
     
 // MARK: - <#Section Heading#>
@@ -137,7 +137,7 @@ extension SignaUppViewController {
 }
 
 extension String {
-    var isValidEmailOrNaw: Bool {
+    var isThisAValidEmailOrNaw: Bool {
         NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").evaluate(with: self)
     }
 }

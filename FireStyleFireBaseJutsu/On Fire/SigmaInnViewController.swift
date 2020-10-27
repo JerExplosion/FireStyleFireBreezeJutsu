@@ -8,7 +8,7 @@
 
 import FirebaseAuth
 import Firebase
-import GoogleSignIn
+// import GoogleSignIn
 import UIKit
 
 class SigmaInnViewController: VelocityAnimaViewController {
@@ -23,7 +23,7 @@ class SigmaInnViewController: VelocityAnimaViewController {
     }
     
     func gidConfigurationHelper() {
-        GIDSignIn.sharedInstance()?.presentingViewController = self
+ //       GIDSignIn.sharedInstance()?.presentingViewController = self
  //       GIDSignIn.sharedInstance()?.restorePreviousSignIn()
     }   
 
