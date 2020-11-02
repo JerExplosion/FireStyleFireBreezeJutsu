@@ -299,7 +299,6 @@
 				8FBD64E624CF661500075A4F /* Resources */,
 				8FD47FB924D06F2100235FFE /* ShellScript */,
 				487DA96F12324853EFE56A28 /* [CP] Embed Pods Frameworks */,
-				0EF332005D438C83ABE3F826 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -371,23 +370,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0EF332005D438C83ABE3F826 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FireStyleFireBaseJutsu/Pods-FireStyleFireBaseJutsu-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FireStyleFireBaseJutsu/Pods-FireStyleFireBaseJutsu-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FireStyleFireBaseJutsu/Pods-FireStyleFireBaseJutsu-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		487DA96F12324853EFE56A28 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
