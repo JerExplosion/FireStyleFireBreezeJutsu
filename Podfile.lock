@@ -1,4 +1,7 @@
 PODS:
+  - Crashlytics (3.14.0):
+    - Fabric (~> 1.10.2)
+  - Fabric (1.10.2)
   - Firebase/Auth (6.33.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.9.2)
@@ -58,6 +61,7 @@ PODS:
   - ViewAnimator (3.0.1)
 
 DEPENDENCIES:
+  - Crashlytics
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Storage
@@ -65,6 +69,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Crashlytics
+    - Fabric
     - Firebase
     - FirebaseAuth
     - FirebaseCore
@@ -80,6 +86,8 @@ SPEC REPOS:
     - ViewAnimator
 
 SPEC CHECKSUMS:
+  Crashlytics: 9220f5bc89e7a618df411b4f639389dbfb0e03d2
+  Fabric: ea977e3cd9c20425516d3dafd3bf8c941c51223f
   Firebase: 8db6f2d1b2c5e2984efba4949a145875a8f65fe5
   FirebaseAuth: c92d49ada7948d1a23466e3db17bc4c2039dddc3
   FirebaseCore: d889d9e12535b7f36ac8bfbf1713a0836a3012cd
@@ -94,6 +102,6 @@ SPEC CHECKSUMS:
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   ViewAnimator: dd18d2f5c1e472f78d0065ff92750fe56cbd2f39
 
-PODFILE CHECKSUM: 964a14257289cdc92ace0ebe5ed11d45146adca0
+PODFILE CHECKSUM: 7ab84bf57ae5f8444f94bfba05d02272b07457fe
 
 COCOAPODS: 1.9.2
