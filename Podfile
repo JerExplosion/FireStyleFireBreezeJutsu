@@ -18,6 +18,4 @@ target 'FireStyleFireBaseJutsu' do
  #   pod 'Nimble'
  #   pod 'Quick'
 
-	pod 'Crashlytics'
-
 end
