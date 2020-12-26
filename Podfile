@@ -16,7 +16,7 @@ target 'FireStyleFireBaseJutsu' do
  #   pod 'GoogleSignIn'
 
     pod 'Nimble'
- #   pod 'Quick'
+    pod 'Quick'
 	
 
 end

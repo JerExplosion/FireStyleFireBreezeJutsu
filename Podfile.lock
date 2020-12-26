@@ -56,6 +56,7 @@ PODS:
   - nanopb/encode (1.30906.0)
   - Nimble (9.0.0)
   - PromisesObjC (1.2.10)
+  - Quick (3.0.0)
   - ViewAnimator (3.0.1)
 
 DEPENDENCIES:
@@ -63,6 +64,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - Nimble
+  - Quick
   - ViewAnimator
 
 SPEC REPOS:
@@ -80,6 +82,7 @@ SPEC REPOS:
     - nanopb
     - Nimble
     - PromisesObjC
+    - Quick
     - ViewAnimator
 
 SPEC CHECKSUMS:
@@ -96,8 +99,9 @@ SPEC CHECKSUMS:
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   ViewAnimator: dd18d2f5c1e472f78d0065ff92750fe56cbd2f39
 
-PODFILE CHECKSUM: d2639a8b263ae1bbf35c2ff73e792243ce6616bf
+PODFILE CHECKSUM: 5681162882296f8fd1d7cfdd22164bf3e88afc20
 
 COCOAPODS: 1.9.2
