@@ -54,6 +54,7 @@ PODS:
     - nanopb/encode (= 1.30906.0)
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
+  - Nimble (9.0.0)
   - PromisesObjC (1.2.10)
   - ViewAnimator (3.0.1)
 
@@ -61,6 +62,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Storage
+  - Nimble
   - ViewAnimator
 
 SPEC REPOS:
@@ -76,6 +78,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - Nimble
     - PromisesObjC
     - ViewAnimator
 
@@ -91,9 +94,10 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
+  Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   ViewAnimator: dd18d2f5c1e472f78d0065ff92750fe56cbd2f39
 
-PODFILE CHECKSUM: 964a14257289cdc92ace0ebe5ed11d45146adca0
+PODFILE CHECKSUM: d2639a8b263ae1bbf35c2ff73e792243ce6616bf
 
 COCOAPODS: 1.9.2
