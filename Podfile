@@ -7,7 +7,7 @@ target 'FireStyleFireBaseJutsu' do
 
   # Pods for FireStyleFireBaseJutsu
 
-  #  pod "ViewAnimator"
+    pod "ViewAnimator"
 
     pod 'Firebase/Database'
     pod 'Firebase/Storage'
