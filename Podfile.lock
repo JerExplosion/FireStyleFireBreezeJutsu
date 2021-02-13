@@ -57,7 +57,6 @@ PODS:
   - Nimble (9.0.0)
   - PromisesObjC (1.2.10)
   - Quick (3.0.0)
-  - ViewAnimator (3.0.1)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -65,7 +64,6 @@ DEPENDENCIES:
   - Firebase/Storage
   - Nimble
   - Quick
-  - ViewAnimator
 
 SPEC REPOS:
   trunk:
@@ -83,7 +81,6 @@ SPEC REPOS:
     - Nimble
     - PromisesObjC
     - Quick
-    - ViewAnimator
 
 SPEC CHECKSUMS:
   Firebase: 8db6f2d1b2c5e2984efba4949a145875a8f65fe5
@@ -100,8 +97,7 @@ SPEC CHECKSUMS:
   Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
-  ViewAnimator: dd18d2f5c1e472f78d0065ff92750fe56cbd2f39
 
-PODFILE CHECKSUM: 5681162882296f8fd1d7cfdd22164bf3e88afc20
+PODFILE CHECKSUM: 4debcf090912b00b1fa91ac046dd08665306068c
 
 COCOAPODS: 1.9.2
