@@ -11,9 +11,13 @@ import XCTest
 // @testable import FireStyleFireBaseJutsu
 // Erro message - "Missing required module 'Firebase' "
      
+class FireBreezeTest: XCTestCase {
 
-class FireBreezeTest: XCTestCase, NSObject { } 
- 
+    override func setUpWithError() throws {
+        
+    }
+    override func tearDownWithError() throws {
+        
+    }
 
-
-
+}
