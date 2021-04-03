@@ -12,12 +12,8 @@ import XCTest
 // Erro message - "Missing required module 'Firebase' "
      
 
-final struct FireBreezeTest: XCTestCase, Any, NSObject, class, AnyObject { }
-final struct FireBreezeTest: XCTestCase, Any, NSObject, class, AnyObject { }
-final struct FireBreezeTest: XCTestCase, Any, NSObject, class, AnyObject { }
-final struct FireBreezeTest: XCTestCase, Any, NSObject, class, AnyObject { }
-final struct FireBreezeTest: XCTestCase, Any, NSObject, class, AnyObject { }
-
+class FireBreezeTest: XCTestCase, NSObject { } 
+ 
 
 
 
